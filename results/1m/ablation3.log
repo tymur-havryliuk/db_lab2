@@ -1,0 +1,11 @@
+[s8mix]
+  S8   sql   workers=1     2276.4 ops/s  p50=   0.380  p99=   0.958 ms  errors=0
+  S8   sql   workers=8    10328.1 ops/s  p50=   0.545  p99=   1.768 ms  errors=0
+  S8   sql   workers=32    5987.1 ops/s  p50=   1.942  p99=  70.444 ms  errors=0
+  S8   jsonb workers=1     2453.7 ops/s  p50=   0.239  p99=   1.639 ms  errors=0
+  S8   jsonb workers=8     8580.0 ops/s  p50=   0.354  p99=   9.992 ms  errors=0
+  S8   jsonb workers=32    6232.3 ops/s  p50=   1.112  p99=  69.887 ms  errors=0
+  S8   mongo workers=1     2205.1 ops/s  p50=   0.363  p99=   1.085 ms  errors=0
+  S8   mongo workers=8    12111.0 ops/s  p50=   0.409  p99=   1.627 ms  errors=0
+  S8   mongo workers=32    7656.8 ops/s  p50=   1.215  p99=  66.454 ms  errors=0
+[verify after ablations] розбіжностей: 0

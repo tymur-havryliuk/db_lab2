@@ -1,0 +1,86 @@
+{
+ "params": {
+  "trip_number": "TR-2026-015265"
+ },
+ "server_ms": 0.0,
+ "notes": {
+  "totalKeysExamined": 1,
+  "totalDocsExamined": 1,
+  "nReturned": 1,
+  "index": "_id_",
+  "stage": "EXPRESS_IXSCAN",
+  "stages": [
+   "EXPRESS_IXSCAN"
+  ]
+ },
+ "plan": {
+  "explainVersion": "1",
+  "queryPlanner": {
+   "namespace": "fleet_bench.trips",
+   "parsedQuery": {
+    "_id": {
+     "$eq": "TR-2026-015265"
+    }
+   },
+   "indexFilterSet": false,
+   "queryHash": "B774D27B",
+   "planCacheShapeHash": "B774D27B",
+   "planCacheKey": "E2C0DF23",
+   "optimizationTimeMillis": 0,
+   "maxIndexedOrSolutionsReached": false,
+   "maxIndexedAndSolutionsReached": false,
+   "maxScansToExplodeReached": false,
+   "prunedSimilarIndexes": false,
+   "winningPlan": {
+    "isCached": false,
+    "stage": "EXPRESS_IXSCAN",
+    "keyPattern": "{ _id: 1 }",
+    "indexName": "_id_"
+   },
+   "rejectedPlans": []
+  },
+  "executionStats": {
+   "executionSuccess": true,
+   "nReturned": 1,
+   "executionTimeMillis": 0,
+   "totalKeysExamined": 1,
+   "totalDocsExamined": 1,
+   "executionStages": {
+    "isCached": false,
+    "stage": "EXPRESS_IXSCAN",
+    "keyPattern": "{ _id: 1 }",
+    "indexName": "_id_",
+    "keysExamined": 1,
+    "docsExamined": 1,
+    "nReturned": 1
+   }
+  },
+  "command": {
+   "find": "trips",
+   "filter": {
+    "_id": "TR-2026-015265"
+   },
+   "limit": 1,
+   "$db": "fleet_bench"
+  },
+  "serverInfo": {
+   "host": "e9db2ef717cd",
+   "port": 27017,
+   "version": "8.2.12",
+   "gitVersion": "0f912e80210b8fdfdcec618b14b6c0fced055cb8"
+  },
+  "serverParameters": {
+   "internalQueryFacetBufferSizeBytes": 104857600,
+   "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+   "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+   "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+   "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+   "internalQueryProhibitBlockingMergeOnMongoS": 0,
+   "internalQueryMaxAddToSetBytes": 104857600,
+   "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+   "internalQueryFrameworkControl": "trySbeRestricted",
+   "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0
+ }
+}

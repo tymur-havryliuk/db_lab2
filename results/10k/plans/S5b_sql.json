@@ -1,0 +1,150 @@
+{
+ "params": {
+  "year": 2023
+ },
+ "server_ms": 0.819,
+ "notes": {
+  "planning_ms": 0.064,
+  "execution_ms": 0.755,
+  "shared_hit": 78,
+  "shared_read": 0,
+  "top_node": "Sort",
+  "indexes": [
+   "ix_fuel_filled"
+  ],
+  "scans": [
+   "Index Scan"
+  ]
+ },
+ "plan": [
+  {
+   "Plan": {
+    "Node Type": "Sort",
+    "Parallel Aware": false,
+    "Async Capable": false,
+    "Startup Cost": 150.51,
+    "Total Cost": 151.76,
+    "Plan Rows": 498,
+    "Plan Width": 76,
+    "Actual Startup Time": 0.717,
+    "Actual Total Time": 0.728,
+    "Actual Rows": 432,
+    "Actual Loops": 1,
+    "Sort Key": [
+     "vehicle_id"
+    ],
+    "Sort Method": "quicksort",
+    "Sort Space Used": 48,
+    "Sort Space Type": "Memory",
+    "Shared Hit Blocks": 78,
+    "Shared Read Blocks": 0,
+    "Shared Dirtied Blocks": 0,
+    "Shared Written Blocks": 0,
+    "Local Hit Blocks": 0,
+    "Local Read Blocks": 0,
+    "Local Dirtied Blocks": 0,
+    "Local Written Blocks": 0,
+    "Temp Read Blocks": 0,
+    "Temp Written Blocks": 0,
+    "I/O Read Time": 0.0,
+    "I/O Write Time": 0.0,
+    "Temp I/O Read Time": 0.0,
+    "Temp I/O Write Time": 0.0,
+    "Plans": [
+     {
+      "Node Type": "Aggregate",
+      "Strategy": "Hashed",
+      "Partial Mode": "Simple",
+      "Parent Relationship": "Outer",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 120.73,
+      "Total Cost": 128.2,
+      "Plan Rows": 498,
+      "Plan Width": 76,
+      "Actual Startup Time": 0.596,
+      "Actual Total Time": 0.67,
+      "Actual Rows": 432,
+      "Actual Loops": 1,
+      "Group Key": [
+       "vehicle_id"
+      ],
+      "Planned Partitions": 0,
+      "HashAgg Batches": 1,
+      "Peak Memory Usage": 553,
+      "Disk Usage": 0,
+      "Shared Hit Blocks": 78,
+      "Shared Read Blocks": 0,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0,
+      "I/O Read Time": 0.0,
+      "I/O Write Time": 0.0,
+      "Temp I/O Read Time": 0.0,
+      "Temp I/O Write Time": 0.0,
+      "Plans": [
+       {
+        "Node Type": "Index Scan",
+        "Parent Relationship": "Outer",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Scan Direction": "Forward",
+        "Index Name": "ix_fuel_filled",
+        "Relation Name": "fuel_transactions",
+        "Alias": "fuel_transactions",
+        "Startup Cost": 0.29,
+        "Total Cost": 95.57,
+        "Plan Rows": 2516,
+        "Plan Width": 18,
+        "Actual Startup Time": 0.016,
+        "Actual Total Time": 0.218,
+        "Actual Rows": 2525,
+        "Actual Loops": 1,
+        "Index Cond": "((filled_at >= '2023-01-01 00:00:00+00'::timestamp with time zone) AND (filled_at < '2024-01-01 00:00:00+00'::timestamp with time zone))",
+        "Rows Removed by Index Recheck": 0,
+        "Shared Hit Blocks": 78,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0,
+        "I/O Read Time": 0.0,
+        "I/O Write Time": 0.0,
+        "Temp I/O Read Time": 0.0,
+        "Temp I/O Write Time": 0.0
+       }
+      ]
+     }
+    ]
+   },
+   "Planning": {
+    "Shared Hit Blocks": 0,
+    "Shared Read Blocks": 0,
+    "Shared Dirtied Blocks": 0,
+    "Shared Written Blocks": 0,
+    "Local Hit Blocks": 0,
+    "Local Read Blocks": 0,
+    "Local Dirtied Blocks": 0,
+    "Local Written Blocks": 0,
+    "Temp Read Blocks": 0,
+    "Temp Written Blocks": 0,
+    "I/O Read Time": 0.0,
+    "I/O Write Time": 0.0,
+    "Temp I/O Read Time": 0.0,
+    "Temp I/O Write Time": 0.0
+   },
+   "Planning Time": 0.064,
+   "Triggers": [],
+   "Execution Time": 0.755
+  }
+ ]
+}

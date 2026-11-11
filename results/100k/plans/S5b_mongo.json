@@ -1,0 +1,420 @@
+{
+ "params": {
+  "year": 2023
+ },
+ "server_ms": 55.0,
+ "notes": {
+  "totalKeysExamined": 13514,
+  "totalDocsExamined": 13514,
+  "nReturned": 12760,
+  "index": "ix_start",
+  "stage": "PROJECTION_DEFAULT",
+  "stages": [
+   "FETCH",
+   "IXSCAN",
+   "PROJECTION_DEFAULT"
+  ]
+ },
+ "plan": {
+  "explainVersion": "1",
+  "stages": [
+   {
+    "$cursor": {
+     "queryPlanner": {
+      "namespace": "fleet_bench.trips",
+      "parsedQuery": {
+       "$and": [
+        {
+         "events.type": {
+          "$eq": "fuel"
+         }
+        },
+        {
+         "planned_start": {
+          "$lt": "2024-01-01 02:00:00"
+         }
+        },
+        {
+         "planned_start": {
+          "$gte": "2022-12-25 00:00:00"
+         }
+        }
+       ]
+      },
+      "indexFilterSet": false,
+      "queryHash": "11FA8BCE",
+      "planCacheShapeHash": "11FA8BCE",
+      "planCacheKey": "AA5BF963",
+      "optimizationTimeMillis": 0,
+      "maxIndexedOrSolutionsReached": false,
+      "maxIndexedAndSolutionsReached": false,
+      "maxScansToExplodeReached": false,
+      "prunedSimilarIndexes": false,
+      "winningPlan": {
+       "isCached": false,
+       "stage": "PROJECTION_DEFAULT",
+       "transformBy": {
+        "_id": true,
+        "v": "$vehicle.id",
+        "ev": {
+         "$filter": {
+          "input": "$events",
+          "as": "e",
+          "cond": {
+           "$and": [
+            {
+             "$eq": [
+              "$$e.type",
+              {
+               "$const": "fuel"
+              }
+             ]
+            },
+            {
+             "$gte": [
+              "$$e.at",
+              {
+               "$const": "2023-01-01 00:00:00"
+              }
+             ]
+            },
+            {
+             "$lt": [
+              "$$e.at",
+              {
+               "$const": "2024-01-01 00:00:00"
+              }
+             ]
+            }
+           ]
+          }
+         }
+        }
+       },
+       "inputStage": {
+        "stage": "FETCH",
+        "filter": {
+         "events.type": {
+          "$eq": "fuel"
+         }
+        },
+        "inputStage": {
+         "stage": "IXSCAN",
+         "keyPattern": {
+          "planned_start": 1
+         },
+         "indexName": "ix_start",
+         "isMultiKey": false,
+         "multiKeyPaths": {
+          "planned_start": []
+         },
+         "isUnique": false,
+         "isSparse": false,
+         "isPartial": false,
+         "indexVersion": 2,
+         "direction": "forward",
+         "indexBounds": {
+          "planned_start": [
+           "[new Date(1671926400000), new Date(1704074400000))"
+          ]
+         }
+        }
+       }
+      },
+      "rejectedPlans": []
+     },
+     "executionStats": {
+      "executionSuccess": true,
+      "nReturned": 12760,
+      "executionTimeMillis": 55,
+      "totalKeysExamined": 13514,
+      "totalDocsExamined": 13514,
+      "executionStages": {
+       "isCached": false,
+       "stage": "PROJECTION_DEFAULT",
+       "nReturned": 12760,
+       "executionTimeMillisEstimate": 18,
+       "works": 13515,
+       "advanced": 12760,
+       "needTime": 754,
+       "needYield": 0,
+       "saveState": 12,
+       "restoreState": 11,
+       "isEOF": 1,
+       "transformBy": {
+        "_id": true,
+        "v": "$vehicle.id",
+        "ev": {
+         "$filter": {
+          "input": "$events",
+          "as": "e",
+          "cond": {
+           "$and": [
+            {
+             "$eq": [
+              "$$e.type",
+              {
+               "$const": "fuel"
+              }
+             ]
+            },
+            {
+             "$gte": [
+              "$$e.at",
+              {
+               "$const": "2023-01-01 00:00:00"
+              }
+             ]
+            },
+            {
+             "$lt": [
+              "$$e.at",
+              {
+               "$const": "2024-01-01 00:00:00"
+              }
+             ]
+            }
+           ]
+          }
+         }
+        }
+       },
+       "inputStage": {
+        "stage": "FETCH",
+        "filter": {
+         "events.type": {
+          "$eq": "fuel"
+         }
+        },
+        "nReturned": 12760,
+        "executionTimeMillisEstimate": 12,
+        "works": 13515,
+        "advanced": 12760,
+        "needTime": 754,
+        "needYield": 0,
+        "saveState": 12,
+        "restoreState": 11,
+        "isEOF": 1,
+        "docsExamined": 13514,
+        "alreadyHasObj": 0,
+        "inputStage": {
+         "stage": "IXSCAN",
+         "nReturned": 13514,
+         "executionTimeMillisEstimate": 0,
+         "works": 13515,
+         "advanced": 13514,
+         "needTime": 0,
+         "needYield": 0,
+         "saveState": 12,
+         "restoreState": 11,
+         "isEOF": 1,
+         "keyPattern": {
+          "planned_start": 1
+         },
+         "indexName": "ix_start",
+         "isMultiKey": false,
+         "multiKeyPaths": {
+          "planned_start": []
+         },
+         "isUnique": false,
+         "isSparse": false,
+         "isPartial": false,
+         "indexVersion": 2,
+         "direction": "forward",
+         "indexBounds": {
+          "planned_start": [
+           "[new Date(1671926400000), new Date(1704074400000))"
+          ]
+         },
+         "keysExamined": 13514,
+         "seeks": 1,
+         "dupsTested": 0,
+         "dupsDropped": 0
+        }
+       }
+      }
+     }
+    },
+    "nReturned": 12760,
+    "executionTimeMillisEstimate": 43
+   },
+   {
+    "$unwind": {
+     "path": "$ev"
+    },
+    "nReturned": 24973,
+    "executionTimeMillisEstimate": 54
+   },
+   {
+    "$group": {
+     "_id": "$v",
+     "fills": {
+      "$sum": {
+       "$const": 1
+      }
+     },
+     "liters": {
+      "$sum": "$ev.liters"
+     },
+     "cost": {
+      "$sum": {
+       "$round": [
+        {
+         "$add": [
+          {
+           "$multiply": [
+            "$ev.liters",
+            "$ev.unit_price"
+           ]
+          },
+          {
+           "$const": "0.00001"
+          }
+         ]
+        },
+        {
+         "$const": 2
+        }
+       ]
+      }
+     },
+     "$willBeMerged": false
+    },
+    "maxAccumulatorMemoryUsageBytes": {
+     "fills": 88000,
+     "liters": 88000,
+     "cost": 88000
+    },
+    "totalOutputDataSizeBytes": 182500,
+    "usedDisk": false,
+    "spills": 0,
+    "spilledDataStorageSize": 0,
+    "spilledBytes": 0,
+    "spilledRecords": 0,
+    "nReturned": 500,
+    "executionTimeMillisEstimate": 54
+   },
+   {
+    "$sort": {
+     "sortKey": {
+      "_id": 1
+     }
+    },
+    "totalDataSizeSortedBytesEstimate": 186500,
+    "usedDisk": false,
+    "spills": 0,
+    "spilledDataStorageSize": 0,
+    "nReturned": 500,
+    "executionTimeMillisEstimate": 54
+   }
+  ],
+  "queryShapeHash": "1548F7E69E3671EE12D0883B64259BBE711DE402BA52012E0913E36C02BA52BF",
+  "serverInfo": {
+   "host": "e9db2ef717cd",
+   "port": 27017,
+   "version": "8.2.12",
+   "gitVersion": "0f912e80210b8fdfdcec618b14b6c0fced055cb8"
+  },
+  "serverParameters": {
+   "internalQueryFacetBufferSizeBytes": 104857600,
+   "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+   "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+   "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+   "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+   "internalQueryProhibitBlockingMergeOnMongoS": 0,
+   "internalQueryMaxAddToSetBytes": 104857600,
+   "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+   "internalQueryFrameworkControl": "trySbeRestricted",
+   "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "command": {
+   "aggregate": "trips",
+   "pipeline": [
+    {
+     "$match": {
+      "planned_start": {
+       "$gte": "2022-12-25 00:00:00",
+       "$lt": "2024-01-01 02:00:00"
+      },
+      "events.type": "fuel"
+     }
+    },
+    {
+     "$project": {
+      "v": "$vehicle.id",
+      "ev": {
+       "$filter": {
+        "input": "$events",
+        "as": "e",
+        "cond": {
+         "$and": [
+          {
+           "$eq": [
+            "$$e.type",
+            "fuel"
+           ]
+          },
+          {
+           "$gte": [
+            "$$e.at",
+            "2023-01-01 00:00:00"
+           ]
+          },
+          {
+           "$lt": [
+            "$$e.at",
+            "2024-01-01 00:00:00"
+           ]
+          }
+         ]
+        }
+       }
+      }
+     }
+    },
+    {
+     "$unwind": "$ev"
+    },
+    {
+     "$group": {
+      "_id": "$v",
+      "fills": {
+       "$sum": 1
+      },
+      "liters": {
+       "$sum": "$ev.liters"
+      },
+      "cost": {
+       "$sum": {
+        "$round": [
+         {
+          "$add": [
+           {
+            "$multiply": [
+             "$ev.liters",
+             "$ev.unit_price"
+            ]
+           },
+           {
+            "$literal": "0.00001"
+           }
+          ]
+         },
+         2
+        ]
+       }
+      }
+     }
+    },
+    {
+     "$sort": {
+      "_id": 1
+     }
+    }
+   ],
+   "cursor": {},
+   "$db": "fleet_bench"
+  },
+  "ok": 1.0
+ }
+}

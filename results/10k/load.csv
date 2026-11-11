@@ -1,0 +1,15 @@
+scale,variant,phase,seconds,docs,rows
+10k,sql,generate,0.193,10000,141234
+10k,sql,data,0.747,10000,141234
+10k,sql,indexes,0.031,10000,141234
+10k,sql,analyze,0.141,10000,141234
+10k,sql,total,0.918,10000,141234
+10k,jsonb,generate,0.194,10000,10000
+10k,jsonb,data,0.328,10000,10000
+10k,jsonb,indexes,0.107,10000,10000
+10k,jsonb,analyze,0.154,10000,10000
+10k,jsonb,total,0.589,10000,10000
+10k,mongo,generate,0.207,10000,10000
+10k,mongo,data,0.484,10000,10000
+10k,mongo,indexes,0.049,10000,10000
+10k,mongo,total,0.534,10000,10000

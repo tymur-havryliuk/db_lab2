@@ -1,0 +1,10 @@
+[sql] завантаження 1000000 рейсів...
+[sql] generate=28.4s data=72.3s indexes=2.2s analyze=1.2s
+[jsonb] завантаження 1000000 рейсів...
+[jsonb] generate=24.3s data=32.6s indexes=11.7s analyze=1.4s
+[mongo] завантаження 1000000 рейсів...
+[mongo] generate=22.3s data=48.2s indexes=3.9s analyze=0.0s
+Кількості [sql]: {'trips': 1000000, 'cargo': 3000344, 'events': 8297531, 'fuel': 1729007, 'fuel_tx': 1729007, 'incidents': 86169}
+Кількості [jsonb]: {'trips': 1000000, 'cargo': 3000344, 'events': 8297531, 'fuel': 1729007, 'fuel_tx': 1729007, 'incidents': 86169}
+Кількості [mongo]: {'trips': 1000000, 'cargo': 3000344, 'events': 8297531, 'fuel': 1729007, 'fuel_tx': 1729007, 'incidents': 86169}
+Звірка кількостей: OK

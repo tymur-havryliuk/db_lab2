@@ -1,0 +1,150 @@
+{
+ "params": {
+  "year": 2022
+ },
+ "server_ms": 10.471,
+ "notes": {
+  "planning_ms": 0.047,
+  "execution_ms": 10.424,
+  "shared_hit": 294,
+  "shared_read": 0,
+  "top_node": "Aggregate",
+  "indexes": [
+   "ix_docs_start"
+  ],
+  "scans": [
+   "Index Scan"
+  ]
+ },
+ "plan": [
+  {
+   "Plan": {
+    "Node Type": "Aggregate",
+    "Strategy": "Sorted",
+    "Partial Mode": "Simple",
+    "Parallel Aware": false,
+    "Async Capable": false,
+    "Startup Cost": 334.36,
+    "Total Cost": 334.74,
+    "Plan Rows": 7,
+    "Plan Width": 48,
+    "Actual Startup Time": 7.652,
+    "Actual Total Time": 10.402,
+    "Actual Rows": 715,
+    "Actual Loops": 1,
+    "Group Key": [
+     "((((doc -> 'customer'::text) ->> 'id'::text))::integer)",
+     "((\"substring\"((doc ->> 'planned_start'::text), 6, 2))::integer)"
+    ],
+    "Shared Hit Blocks": 294,
+    "Shared Read Blocks": 0,
+    "Shared Dirtied Blocks": 0,
+    "Shared Written Blocks": 0,
+    "Local Hit Blocks": 0,
+    "Local Read Blocks": 0,
+    "Local Dirtied Blocks": 0,
+    "Local Written Blocks": 0,
+    "Temp Read Blocks": 0,
+    "Temp Written Blocks": 0,
+    "I/O Read Time": 0.0,
+    "I/O Write Time": 0.0,
+    "Temp I/O Read Time": 0.0,
+    "Temp I/O Write Time": 0.0,
+    "Plans": [
+     {
+      "Node Type": "Sort",
+      "Parent Relationship": "Outer",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Startup Cost": 334.36,
+      "Total Cost": 334.37,
+      "Plan Rows": 7,
+      "Plan Width": 1487,
+      "Actual Startup Time": 7.647,
+      "Actual Total Time": 7.683,
+      "Actual Rows": 1271,
+      "Actual Loops": 1,
+      "Sort Key": [
+       "((((doc -> 'customer'::text) ->> 'id'::text))::integer)",
+       "((\"substring\"((doc ->> 'planned_start'::text), 6, 2))::integer)"
+      ],
+      "Sort Method": "quicksort",
+      "Sort Space Used": 1955,
+      "Sort Space Type": "Memory",
+      "Shared Hit Blocks": 294,
+      "Shared Read Blocks": 0,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0,
+      "I/O Read Time": 0.0,
+      "I/O Write Time": 0.0,
+      "Temp I/O Read Time": 0.0,
+      "Temp I/O Write Time": 0.0,
+      "Plans": [
+       {
+        "Node Type": "Index Scan",
+        "Parent Relationship": "Outer",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Scan Direction": "Forward",
+        "Index Name": "ix_docs_start",
+        "Relation Name": "trip_docs",
+        "Alias": "trip_docs",
+        "Startup Cost": 0.29,
+        "Total Cost": 334.26,
+        "Plan Rows": 7,
+        "Plan Width": 1487,
+        "Actual Startup Time": 0.031,
+        "Actual Total Time": 7.081,
+        "Actual Rows": 1271,
+        "Actual Loops": 1,
+        "Index Cond": "(((doc ->> 'planned_start'::text) >= '2022-01-01T00:00:00Z'::text) AND ((doc ->> 'planned_start'::text) < '2023-01-01T00:00:00Z'::text))",
+        "Rows Removed by Index Recheck": 0,
+        "Filter": "((doc ->> 'status'::text) = 'completed'::text)",
+        "Rows Removed by Filter": 68,
+        "Shared Hit Blocks": 294,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0,
+        "I/O Read Time": 0.0,
+        "I/O Write Time": 0.0,
+        "Temp I/O Read Time": 0.0,
+        "Temp I/O Write Time": 0.0
+       }
+      ]
+     }
+    ]
+   },
+   "Planning": {
+    "Shared Hit Blocks": 0,
+    "Shared Read Blocks": 0,
+    "Shared Dirtied Blocks": 0,
+    "Shared Written Blocks": 0,
+    "Local Hit Blocks": 0,
+    "Local Read Blocks": 0,
+    "Local Dirtied Blocks": 0,
+    "Local Written Blocks": 0,
+    "Temp Read Blocks": 0,
+    "Temp Written Blocks": 0,
+    "I/O Read Time": 0.0,
+    "I/O Write Time": 0.0,
+    "Temp I/O Read Time": 0.0,
+    "Temp I/O Write Time": 0.0
+   },
+   "Planning Time": 0.047,
+   "Triggers": [],
+   "Execution Time": 10.424
+  }
+ ]
+}

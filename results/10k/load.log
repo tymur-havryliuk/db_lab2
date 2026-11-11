@@ -1,0 +1,11 @@
+[sql] завантаження 10000 рейсів...
+[sql] generate=0.2s data=0.7s indexes=0.0s analyze=0.1s
+[jsonb] завантаження 10000 рейсів...
+[jsonb] generate=0.2s data=0.3s indexes=0.1s analyze=0.2s
+[mongo] завантаження 10000 рейсів...
+[mongo] generate=0.2s data=0.5s indexes=0.0s analyze=0.0s
+Кількості [sql]: {'trips': 10000, 'cargo': 30088, 'events': 83053, 'fuel': 17238, 'fuel_tx': 17238, 'incidents': 855}
+Кількості [jsonb]: {'trips': 10000, 'cargo': 30088, 'events': 83053, 'fuel': 17238, 'fuel_tx': 17238, 'incidents': 855}
+Кількості [mongo]: {'trips': 10000, 'cargo': 30088, 'events': 83053, 'fuel': 17238, 'fuel_tx': 17238, 'incidents': 855}
+Середні: вантажу/рейс=3.01, подій/completed=9.61, заправок/completed=1.99, completed з інцидентом=10.0%
+Звірка кількостей: OK

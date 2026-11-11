@@ -1,0 +1,289 @@
+{
+ "params": {
+  "adr_class": 3,
+  "date_from": "2024-12-19 00:00:00+00:00",
+  "date_to": "2025-01-18 00:00:00+00:00"
+ },
+ "server_ms": 8.0,
+ "notes": {
+  "totalKeysExamined": 1128,
+  "totalDocsExamined": 1128,
+  "nReturned": 1128,
+  "index": "ix_adr_start",
+  "stage": "SORT",
+  "stages": [
+   "FETCH",
+   "IXSCAN",
+   "PROJECTION_SIMPLE",
+   "SORT"
+  ]
+ },
+ "plan": {
+  "explainVersion": "1",
+  "queryPlanner": {
+   "namespace": "fleet_bench.trips",
+   "parsedQuery": {
+    "$and": [
+     {
+      "cargo.adr_class": {
+       "$eq": 3
+      }
+     },
+     {
+      "planned_start": {
+       "$lt": "2025-01-18 00:00:00"
+      }
+     },
+     {
+      "planned_start": {
+       "$gte": "2024-12-19 00:00:00"
+      }
+     }
+    ]
+   },
+   "indexFilterSet": false,
+   "queryHash": "429D67E8",
+   "planCacheShapeHash": "429D67E8",
+   "planCacheKey": "BA085670",
+   "optimizationTimeMillis": 8,
+   "maxIndexedOrSolutionsReached": false,
+   "maxIndexedAndSolutionsReached": false,
+   "maxScansToExplodeReached": false,
+   "prunedSimilarIndexes": false,
+   "winningPlan": {
+    "isCached": true,
+    "stage": "SORT",
+    "sortPattern": {
+     "planned_start": 1,
+     "_id": 1
+    },
+    "memLimit": 104857600,
+    "type": "simple",
+    "inputStage": {
+     "stage": "PROJECTION_SIMPLE",
+     "transformBy": {
+      "planned_start": 1
+     },
+     "inputStage": {
+      "stage": "FETCH",
+      "inputStage": {
+       "stage": "IXSCAN",
+       "keyPattern": {
+        "cargo.adr_class": 1,
+        "planned_start": 1
+       },
+       "indexName": "ix_adr_start",
+       "isMultiKey": true,
+       "multiKeyPaths": {
+        "cargo.adr_class": [
+         "cargo"
+        ],
+        "planned_start": []
+       },
+       "isUnique": false,
+       "isSparse": false,
+       "isPartial": true,
+       "indexVersion": 2,
+       "direction": "forward",
+       "indexBounds": {
+        "cargo.adr_class": [
+         "[3, 3]"
+        ],
+        "planned_start": [
+         "[new Date(1734566400000), new Date(1737158400000))"
+        ]
+       }
+      }
+     }
+    }
+   },
+   "rejectedPlans": [
+    {
+     "isCached": false,
+     "stage": "SORT",
+     "sortPattern": {
+      "planned_start": 1,
+      "_id": 1
+     },
+     "memLimit": 104857600,
+     "type": "simple",
+     "inputStage": {
+      "stage": "PROJECTION_SIMPLE",
+      "transformBy": {
+       "planned_start": 1
+      },
+      "inputStage": {
+       "stage": "FETCH",
+       "filter": {
+        "cargo.adr_class": {
+         "$eq": 3
+        }
+       },
+       "inputStage": {
+        "stage": "IXSCAN",
+        "keyPattern": {
+         "planned_start": 1
+        },
+        "indexName": "ix_start",
+        "isMultiKey": false,
+        "multiKeyPaths": {
+         "planned_start": []
+        },
+        "isUnique": false,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+         "planned_start": [
+          "[new Date(1734566400000), new Date(1737158400000))"
+         ]
+        }
+       }
+      }
+     }
+    }
+   ]
+  },
+  "executionStats": {
+   "executionSuccess": true,
+   "nReturned": 1128,
+   "executionTimeMillis": 8,
+   "totalKeysExamined": 1128,
+   "totalDocsExamined": 1128,
+   "executionStages": {
+    "isCached": true,
+    "stage": "SORT",
+    "nReturned": 1128,
+    "executionTimeMillisEstimate": 0,
+    "works": 2258,
+    "advanced": 1128,
+    "needTime": 1129,
+    "needYield": 0,
+    "saveState": 0,
+    "restoreState": 0,
+    "isEOF": 1,
+    "sortPattern": {
+     "planned_start": 1,
+     "_id": 1
+    },
+    "memLimit": 104857600,
+    "type": "simple",
+    "totalDataSizeSorted": 218832,
+    "usedDisk": false,
+    "spills": 0,
+    "spilledRecords": 0,
+    "spilledBytes": 0,
+    "spilledDataStorageSize": 0,
+    "inputStage": {
+     "stage": "PROJECTION_SIMPLE",
+     "nReturned": 1128,
+     "executionTimeMillisEstimate": 0,
+     "works": 1129,
+     "advanced": 1128,
+     "needTime": 0,
+     "needYield": 0,
+     "saveState": 0,
+     "restoreState": 0,
+     "isEOF": 1,
+     "transformBy": {
+      "planned_start": 1
+     },
+     "inputStage": {
+      "stage": "FETCH",
+      "nReturned": 1128,
+      "executionTimeMillisEstimate": 0,
+      "works": 1129,
+      "advanced": 1128,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "docsExamined": 1128,
+      "alreadyHasObj": 0,
+      "inputStage": {
+       "stage": "IXSCAN",
+       "nReturned": 1128,
+       "executionTimeMillisEstimate": 0,
+       "works": 1129,
+       "advanced": 1128,
+       "needTime": 0,
+       "needYield": 0,
+       "saveState": 0,
+       "restoreState": 0,
+       "isEOF": 1,
+       "keyPattern": {
+        "cargo.adr_class": 1,
+        "planned_start": 1
+       },
+       "indexName": "ix_adr_start",
+       "isMultiKey": true,
+       "multiKeyPaths": {
+        "cargo.adr_class": [
+         "cargo"
+        ],
+        "planned_start": []
+       },
+       "isUnique": false,
+       "isSparse": false,
+       "isPartial": true,
+       "indexVersion": 2,
+       "direction": "forward",
+       "indexBounds": {
+        "cargo.adr_class": [
+         "[3, 3]"
+        ],
+        "planned_start": [
+         "[new Date(1734566400000), new Date(1737158400000))"
+        ]
+       },
+       "keysExamined": 1128,
+       "seeks": 1,
+       "dupsTested": 1128,
+       "dupsDropped": 0
+      }
+     }
+    }
+   }
+  },
+  "queryShapeHash": "5828D0260AD0B6BF10454E59924ADB29CE56A79BD8BD8A9CD7B4C2DEA2FCC629",
+  "command": {
+   "find": "trips",
+   "filter": {
+    "cargo.adr_class": 3,
+    "planned_start": {
+     "$gte": "2024-12-19 00:00:00",
+     "$lt": "2025-01-18 00:00:00"
+    }
+   },
+   "projection": {
+    "planned_start": 1
+   },
+   "sort": {
+    "planned_start": 1,
+    "_id": 1
+   },
+   "$db": "fleet_bench"
+  },
+  "serverInfo": {
+   "host": "e9db2ef717cd",
+   "port": 27017,
+   "version": "8.2.12",
+   "gitVersion": "0f912e80210b8fdfdcec618b14b6c0fced055cb8"
+  },
+  "serverParameters": {
+   "internalQueryFacetBufferSizeBytes": 104857600,
+   "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+   "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+   "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+   "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+   "internalQueryProhibitBlockingMergeOnMongoS": 0,
+   "internalQueryMaxAddToSetBytes": 104857600,
+   "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+   "internalQueryFrameworkControl": "trySbeRestricted",
+   "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0
+ }
+}

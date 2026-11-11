@@ -1,0 +1,44 @@
+[verify] перевірено 75 викликів, розбіжностей: 0
+[warm] читання
+  S1   sql   warm n=200  p50=    0.721 ms  p95=    0.950  p99=    1.028
+  S1   jsonb warm n=200  p50=    0.212 ms  p95=    0.288  p99=    0.327
+  S1   mongo warm n=200  p50=    0.286 ms  p95=    0.335  p99=    0.478
+  S2   jsonb warm n=200  p50=    0.965 ms  p95=    1.671  p99=    1.929
+  S2   mongo warm n=200  p50=    0.743 ms  p95=    0.892  p99=    1.006
+  S2   sql   warm n=200  p50=    0.973 ms  p95=    2.193  p99=    2.497
+  S7   mongo warm n=200  p50=   10.534 ms  p95=   12.952  p99=   14.643
+  S7   sql   warm n=200  p50=    7.442 ms  p95=    8.585  p99=   10.086
+  S7   jsonb warm n=200  p50=   22.011 ms  p95=   34.751  p99=   39.185
+  S5a  sql   warm n=15   p50=   51.997 ms  p95=   57.197  p99=   57.795
+  S5a  jsonb warm n=15   p50= 1211.407 ms  p95= 1330.030  p99= 1353.899
+  S5a  mongo warm n=15   p50=  252.900 ms  p95=  261.403  p99=  262.281
+  S5b  jsonb warm n=15   p50=  707.221 ms  p95=  736.137  p99=  736.913
+  S5b  mongo warm n=15   p50=  541.711 ms  p95=  563.487  p99=  582.439
+  S5b  sql   warm n=15   p50=   48.251 ms  p95=   64.795  p99=   65.559
+[writes] S3, S6, S4
+  S3a  sql   warm n=200  p50=    0.448 ms  p95=    0.756  p99=    0.838
+  S3a  jsonb warm n=200  p50=    0.487 ms  p95=    0.805  p99=    1.014
+  S3a  mongo warm n=200  p50=    0.514 ms  p95=    1.040  p99=    1.515
+  S3b  jsonb warm n=200  p50=    0.454 ms  p95=    0.654  p99=    0.731
+  S3b  mongo warm n=200  p50=    0.875 ms  p95=    1.665  p99=    1.931
+  S3b  sql   warm n=200  p50=    0.515 ms  p95=    1.030  p99=    1.201
+  S6all sql   warm n=15   p50=    0.682 ms  p95=    2.084  p99=    3.978
+  S6all jsonb warm n=15   p50=   15.878 ms  p95=   73.318  p99=   98.053
+  S6all mongo warm n=15   p50=    4.930 ms  p95=   52.026  p99=   69.935
+  S6open jsonb warm n=15   p50=    2.607 ms  p95=   19.544  p99=   32.006
+  S6open mongo warm n=15   p50=    4.377 ms  p95=   36.009  p99=   44.821
+  S6open sql   warm n=15   p50=    0.712 ms  p95=    2.666  p99=    5.031
+  S4   sql   batch=1     p50=    1.586 ms/batch        552 trips/s
+  S4   sql   batch=10    p50=    5.658 ms/batch       1743 trips/s
+  S4   sql   batch=100   p50=   14.573 ms/batch       6622 trips/s
+  S4   sql   batch=1000  p50=   85.769 ms/batch      11530 trips/s
+  S4   jsonb batch=1     p50=    0.625 ms/batch       1505 trips/s
+  S4   jsonb batch=10    p50=    1.376 ms/batch       7065 trips/s
+  S4   jsonb batch=100   p50=    5.906 ms/batch      16298 trips/s
+  S4   jsonb batch=1000  p50=   44.099 ms/batch      22664 trips/s
+  S4   mongo batch=1     p50=    0.653 ms/batch       1311 trips/s
+  S4   mongo batch=10    p50=    2.451 ms/batch       3661 trips/s
+  S4   mongo batch=100   p50=    6.137 ms/batch      14931 trips/s
+  S4   mongo batch=1000  p50=   50.886 ms/batch      19304 trips/s
+[verify] перевірено 75 викликів, розбіжностей: 0
+готово за 231 s; результати в /Users/tymur.havryliuk/uni/DB/lab2/results/1m_r2

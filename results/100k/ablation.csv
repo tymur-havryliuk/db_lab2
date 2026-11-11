@@ -1,0 +1,40 @@
+scale,ablation,scenario,variant,mode,n,p50_ms,p95_ms,p99_ms,extra
+100k,audit,S3-checkpoint,sql,no_audit,200,0.215,0.3561,0.8658,
+100k,audit,S3-fuel,sql,no_audit,200,0.227,0.3933,0.5061,
+100k,audit,S3-checkpoint,mongo,no_audit,200,0.3068,0.6833,0.8071,
+100k,audit,S3-fuel,mongo,no_audit,200,0.368,0.7132,0.7825,
+100k,audit,S4_b1,sql,no_audit,200,1.2018,1.5685,2.0408,
+100k,audit,S4_b1_tps,sql,no_audit,200,832.1,,,trips/s за p50
+100k,audit,S4_b10,sql,no_audit,100,3.7509,4.416,4.7429,
+100k,audit,S4_b10_tps,sql,no_audit,100,2666.1,,,trips/s за p50
+100k,audit,S4_b100,sql,no_audit,30,12.1547,17.3819,20.6857,
+100k,audit,S4_b100_tps,sql,no_audit,30,8227.3,,,trips/s за p50
+100k,audit,S4_b1000,sql,no_audit,10,90.9625,99.407,101.5276,
+100k,audit,S4_b1000_tps,sql,no_audit,10,10993.5,,,trips/s за p50
+100k,audit,S4_b1,mongo,no_audit,200,0.3821,0.7555,0.8039,
+100k,audit,S4_b1_tps,mongo,no_audit,200,2617.2,,,trips/s за p50
+100k,audit,S4_b10,mongo,no_audit,100,1.1879,1.3489,1.6001,
+100k,audit,S4_b10_tps,mongo,no_audit,100,8418.0,,,trips/s за p50
+100k,audit,S4_b100,mongo,no_audit,30,6.8235,7.9725,8.4247,
+100k,audit,S4_b100_tps,mongo,no_audit,30,14655.2,,,trips/s за p50
+100k,audit,S4_b1000,mongo,no_audit,10,53.3404,58.7091,58.8909,
+100k,audit,S4_b1000_tps,mongo,no_audit,10,18747.5,,,trips/s за p50
+100k,audit,S3-checkpoint,sql,with_audit,200,0.2358,0.4068,1.6562,
+100k,audit,S3-fuel,sql,with_audit,200,0.2605,0.3865,0.4496,
+100k,audit,S4_b1,sql,with_audit,200,1.3613,1.8217,2.2006,
+100k,audit,S4_b1_tps,sql,with_audit,200,734.6,,,trips/s за p50
+100k,audit,S4_b10,sql,with_audit,100,5.5434,7.716,9.1692,
+100k,audit,S4_b10_tps,sql,with_audit,100,1804.0,,,trips/s за p50
+100k,audit,S4_b100,sql,with_audit,30,30.1951,33.3123,35.2929,
+100k,audit,S4_b100_tps,sql,with_audit,30,3311.8,,,trips/s за p50
+100k,audit,S4_b1000,sql,with_audit,10,239.355,251.1961,252.9969,
+100k,audit,S4_b1000_tps,sql,with_audit,10,4177.9,,,trips/s за p50
+100k,audit,change_log_rows,sql,with_audit,200951,,,,рядків журналу
+100k,hybrid,create_trip,sql,sql_only,200,1.2176,1.7124,2.2716,
+100k,hybrid,create_trip,mongo,mongo_only,200,0.5213,1.0287,1.5992,
+100k,hybrid,create_trip,pg+mongo,hybrid_sync,200,1.9028,3.2266,3.8935,p50 частин: pg=1.302 mongo=0.616 мс
+100k,hybrid,create_trip,sql,hybrid_sync_pg_part,200,1.3025,2.3661,2.6303,
+100k,hybrid,create_trip,mongo,hybrid_sync_mongo_part,200,0.6159,0.9838,1.255,
+100k,hybrid,create_trip,pg+outbox,hybrid_outbox_commit,200,1.3679,1.7464,2.0824,
+100k,hybrid,outbox_shipper,pg→mongo,batch100,23,14.2142,31.4348,38.9899,5908 trips/s (2230 рейсів за 0.38 с; p50 — латентність пачки 100)
+100k,hybrid,outbox_shipper_tps,pg→mongo,batch100,2230,5907.7,,,trips/s (повний дренаж)

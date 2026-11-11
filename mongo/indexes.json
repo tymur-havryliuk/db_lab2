@@ -1,0 +1,41 @@
+[
+  {
+    "name": "ux_trip_id",
+    "key": {
+      "trip_id": 1
+    },
+    "unique": true
+  },
+  {
+    "name": "ix_driver_start",
+    "key": {
+      "driver.id": 1,
+      "planned_start": -1,
+      "_id": -1
+    }
+  },
+  {
+    "name": "ix_start",
+    "key": {
+      "planned_start": 1
+    }
+  },
+  {
+    "name": "ix_customer",
+    "key": {
+      "customer.id": 1
+    }
+  },
+  {
+    "name": "ix_adr_start",
+    "key": {
+      "cargo.adr_class": 1,
+      "planned_start": 1
+    },
+    "partialFilterExpression": {
+      "cargo.adr_class": {
+        "$exists": true
+      }
+    }
+  }
+]

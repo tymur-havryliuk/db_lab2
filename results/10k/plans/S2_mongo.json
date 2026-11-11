@@ -1,0 +1,325 @@
+{
+ "params": {
+  "driver_id": 79,
+  "date_from": "2021-07-25 00:00:00+00:00",
+  "date_to": "2022-07-25 00:00:00+00:00",
+  "page": 1
+ },
+ "server_ms": 0.0,
+ "notes": {
+  "totalKeysExamined": 0,
+  "totalDocsExamined": 0,
+  "nReturned": 0,
+  "index": "ix_driver_start",
+  "stage": "LIMIT",
+  "stages": [
+   "FETCH",
+   "IXSCAN",
+   "LIMIT",
+   "PROJECTION_DEFAULT",
+   "SKIP"
+  ]
+ },
+ "plan": {
+  "explainVersion": "1",
+  "queryPlanner": {
+   "namespace": "fleet_bench.trips",
+   "parsedQuery": {
+    "$and": [
+     {
+      "driver.id": {
+       "$eq": 79
+      }
+     },
+     {
+      "planned_start": {
+       "$lt": "2022-07-25 00:00:00"
+      }
+     },
+     {
+      "planned_start": {
+       "$gte": "2021-07-25 00:00:00"
+      }
+     }
+    ]
+   },
+   "indexFilterSet": false,
+   "queryHash": "FD9835F8",
+   "planCacheShapeHash": "FD9835F8",
+   "planCacheKey": "89AEB1BF",
+   "optimizationTimeMillis": 0,
+   "maxIndexedOrSolutionsReached": false,
+   "maxIndexedAndSolutionsReached": false,
+   "maxScansToExplodeReached": false,
+   "prunedSimilarIndexes": false,
+   "winningPlan": {
+    "isCached": true,
+    "stage": "LIMIT",
+    "limitAmount": 20,
+    "inputStage": {
+     "stage": "PROJECTION_DEFAULT",
+     "transformBy": {
+      "planned_start": 1,
+      "status": 1,
+      "route.from": 1,
+      "route.to": 1,
+      "customer.name": 1,
+      "totals.freight_price": 1
+     },
+     "inputStage": {
+      "stage": "FETCH",
+      "inputStage": {
+       "stage": "SKIP",
+       "skipAmount": 20,
+       "inputStage": {
+        "stage": "IXSCAN",
+        "keyPattern": {
+         "driver.id": 1,
+         "planned_start": -1,
+         "_id": -1
+        },
+        "indexName": "ix_driver_start",
+        "isMultiKey": false,
+        "multiKeyPaths": {
+         "driver.id": [],
+         "planned_start": [],
+         "_id": []
+        },
+        "isUnique": false,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+         "driver.id": [
+          "[79, 79]"
+         ],
+         "planned_start": [
+          "(new Date(1658707200000), new Date(1627171200000)]"
+         ],
+         "_id": [
+          "[MaxKey, MinKey]"
+         ]
+        }
+       }
+      }
+     }
+    }
+   },
+   "rejectedPlans": [
+    {
+     "isCached": false,
+     "stage": "PROJECTION_DEFAULT",
+     "transformBy": {
+      "planned_start": 1,
+      "status": 1,
+      "route.from": 1,
+      "route.to": 1,
+      "customer.name": 1,
+      "totals.freight_price": 1
+     },
+     "inputStage": {
+      "stage": "SKIP",
+      "skipAmount": 20,
+      "inputStage": {
+       "stage": "SORT",
+       "sortPattern": {
+        "planned_start": -1,
+        "_id": -1
+       },
+       "memLimit": 104857600,
+       "limitAmount": 40,
+       "type": "simple",
+       "inputStage": {
+        "stage": "FETCH",
+        "filter": {
+         "driver.id": {
+          "$eq": 79
+         }
+        },
+        "inputStage": {
+         "stage": "IXSCAN",
+         "keyPattern": {
+          "planned_start": 1
+         },
+         "indexName": "ix_start",
+         "isMultiKey": false,
+         "multiKeyPaths": {
+          "planned_start": []
+         },
+         "isUnique": false,
+         "isSparse": false,
+         "isPartial": false,
+         "indexVersion": 2,
+         "direction": "forward",
+         "indexBounds": {
+          "planned_start": [
+           "[new Date(1627171200000), new Date(1658707200000))"
+          ]
+         }
+        }
+       }
+      }
+     }
+    }
+   ]
+  },
+  "executionStats": {
+   "executionSuccess": true,
+   "nReturned": 0,
+   "executionTimeMillis": 0,
+   "totalKeysExamined": 0,
+   "totalDocsExamined": 0,
+   "executionStages": {
+    "isCached": true,
+    "stage": "LIMIT",
+    "nReturned": 0,
+    "executionTimeMillisEstimate": 0,
+    "works": 2,
+    "advanced": 0,
+    "needTime": 0,
+    "needYield": 0,
+    "saveState": 0,
+    "restoreState": 0,
+    "isEOF": 1,
+    "limitAmount": 20,
+    "inputStage": {
+     "stage": "PROJECTION_DEFAULT",
+     "nReturned": 0,
+     "executionTimeMillisEstimate": 0,
+     "works": 2,
+     "advanced": 0,
+     "needTime": 0,
+     "needYield": 0,
+     "saveState": 0,
+     "restoreState": 0,
+     "isEOF": 1,
+     "transformBy": {
+      "planned_start": 1,
+      "status": 1,
+      "route.from": 1,
+      "route.to": 1,
+      "customer.name": 1,
+      "totals.freight_price": 1
+     },
+     "inputStage": {
+      "stage": "FETCH",
+      "nReturned": 0,
+      "executionTimeMillisEstimate": 0,
+      "works": 2,
+      "advanced": 0,
+      "needTime": 0,
+      "needYield": 0,
+      "saveState": 0,
+      "restoreState": 0,
+      "isEOF": 1,
+      "docsExamined": 0,
+      "alreadyHasObj": 0,
+      "inputStage": {
+       "stage": "SKIP",
+       "nReturned": 0,
+       "executionTimeMillisEstimate": 0,
+       "works": 1,
+       "advanced": 0,
+       "needTime": 0,
+       "needYield": 0,
+       "saveState": 0,
+       "restoreState": 0,
+       "isEOF": 1,
+       "skipAmount": 20,
+       "inputStage": {
+        "stage": "IXSCAN",
+        "nReturned": 0,
+        "executionTimeMillisEstimate": 0,
+        "works": 1,
+        "advanced": 0,
+        "needTime": 0,
+        "needYield": 0,
+        "saveState": 0,
+        "restoreState": 0,
+        "isEOF": 1,
+        "keyPattern": {
+         "driver.id": 1,
+         "planned_start": -1,
+         "_id": -1
+        },
+        "indexName": "ix_driver_start",
+        "isMultiKey": false,
+        "multiKeyPaths": {
+         "driver.id": [],
+         "planned_start": [],
+         "_id": []
+        },
+        "isUnique": false,
+        "isSparse": false,
+        "isPartial": false,
+        "indexVersion": 2,
+        "direction": "forward",
+        "indexBounds": {
+         "driver.id": [
+          "[79, 79]"
+         ],
+         "planned_start": [
+          "(new Date(1658707200000), new Date(1627171200000)]"
+         ],
+         "_id": [
+          "[MaxKey, MinKey]"
+         ]
+        },
+        "keysExamined": 0,
+        "seeks": 1,
+        "dupsTested": 0,
+        "dupsDropped": 0
+       }
+      }
+     }
+    }
+   }
+  },
+  "queryShapeHash": "AAC25D06A4F3023866E2D007BD9275FB2C497932E6B51174DB2D4D67A57AECE0",
+  "command": {
+   "find": "trips",
+   "filter": {
+    "driver.id": 79,
+    "planned_start": {
+     "$gte": "2021-07-25 00:00:00",
+     "$lt": "2022-07-25 00:00:00"
+    }
+   },
+   "projection": {
+    "planned_start": 1,
+    "status": 1,
+    "route.from": 1,
+    "route.to": 1,
+    "customer.name": 1,
+    "totals.freight_price": 1
+   },
+   "sort": {
+    "planned_start": -1,
+    "_id": -1
+   },
+   "skip": 20,
+   "limit": 20,
+   "$db": "fleet_bench"
+  },
+  "serverInfo": {
+   "host": "e9db2ef717cd",
+   "port": 27017,
+   "version": "8.2.12",
+   "gitVersion": "0f912e80210b8fdfdcec618b14b6c0fced055cb8"
+  },
+  "serverParameters": {
+   "internalQueryFacetBufferSizeBytes": 104857600,
+   "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+   "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+   "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+   "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+   "internalQueryProhibitBlockingMergeOnMongoS": 0,
+   "internalQueryMaxAddToSetBytes": 104857600,
+   "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+   "internalQueryFrameworkControl": "trySbeRestricted",
+   "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "ok": 1.0
+ }
+}

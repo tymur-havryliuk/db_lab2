@@ -1,0 +1,549 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "_id",
+      "trip_id",
+      "status",
+      "vehicle",
+      "driver",
+      "customer",
+      "route",
+      "planned_start",
+      "planned_end",
+      "cargo",
+      "events",
+      "totals"
+    ],
+    "properties": {
+      "_id": {
+        "bsonType": "string"
+      },
+      "trip_id": {
+        "bsonType": [
+          "int",
+          "long"
+        ]
+      },
+      "status": {
+        "enum": [
+          "planned",
+          "in_progress",
+          "completed",
+          "cancelled"
+        ]
+      },
+      "vehicle": {
+        "bsonType": "object",
+        "required": [
+          "id",
+          "plate",
+          "vin",
+          "model"
+        ],
+        "properties": {
+          "id": {
+            "bsonType": [
+              "int",
+              "long"
+            ]
+          },
+          "plate": {
+            "bsonType": "string"
+          },
+          "vin": {
+            "bsonType": "string"
+          },
+          "model": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "driver": {
+        "bsonType": "object",
+        "required": [
+          "id",
+          "full_name",
+          "license"
+        ],
+        "properties": {
+          "id": {
+            "bsonType": [
+              "int",
+              "long"
+            ]
+          },
+          "full_name": {
+            "bsonType": "string"
+          },
+          "license": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "customer": {
+        "bsonType": "object",
+        "required": [
+          "id",
+          "name",
+          "tax_code",
+          "city"
+        ],
+        "properties": {
+          "id": {
+            "bsonType": [
+              "int",
+              "long"
+            ]
+          },
+          "name": {
+            "bsonType": "string"
+          },
+          "tax_code": {
+            "bsonType": "string"
+          },
+          "city": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "route": {
+        "bsonType": "object",
+        "required": [
+          "id",
+          "code",
+          "from",
+          "to",
+          "km"
+        ],
+        "properties": {
+          "id": {
+            "bsonType": [
+              "int",
+              "long"
+            ]
+          },
+          "code": {
+            "bsonType": "string"
+          },
+          "from": {
+            "bsonType": "string"
+          },
+          "to": {
+            "bsonType": "string"
+          },
+          "km": {
+            "bsonType": "decimal"
+          }
+        }
+      },
+      "planned_start": {
+        "bsonType": "date"
+      },
+      "planned_end": {
+        "bsonType": "date"
+      },
+      "started_at": {
+        "bsonType": [
+          "date",
+          "null"
+        ]
+      },
+      "finished_at": {
+        "bsonType": [
+          "date",
+          "null"
+        ]
+      },
+      "cancel_reason": {
+        "bsonType": [
+          "string",
+          "null"
+        ]
+      },
+      "cargo": {
+        "bsonType": "array",
+        "minItems": 1,
+        "items": {
+          "oneOf": [
+            {
+              "bsonType": "object",
+              "required": [
+                "kind",
+                "title",
+                "kg",
+                "packages"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "general"
+                  ]
+                },
+                "title": {
+                  "bsonType": "string"
+                },
+                "kg": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "packages": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                }
+              }
+            },
+            {
+              "bsonType": "object",
+              "required": [
+                "kind",
+                "title",
+                "kg",
+                "temp_min",
+                "temp_max"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "reefer"
+                  ]
+                },
+                "title": {
+                  "bsonType": "string"
+                },
+                "kg": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "temp_min": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "temp_max": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                }
+              }
+            },
+            {
+              "bsonType": "object",
+              "required": [
+                "kind",
+                "title",
+                "kg",
+                "un_number",
+                "adr_class",
+                "packing_group"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "adr"
+                  ]
+                },
+                "title": {
+                  "bsonType": "string"
+                },
+                "kg": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "un_number": {
+                  "bsonType": "string"
+                },
+                "adr_class": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ],
+                  "minimum": 1,
+                  "maximum": 9
+                },
+                "packing_group": {
+                  "enum": [
+                    "I",
+                    "II",
+                    "III"
+                  ]
+                }
+              }
+            },
+            {
+              "bsonType": "object",
+              "required": [
+                "kind",
+                "title",
+                "kg",
+                "length_cm",
+                "width_cm",
+                "height_cm"
+              ],
+              "properties": {
+                "kind": {
+                  "enum": [
+                    "oversize"
+                  ]
+                },
+                "title": {
+                  "bsonType": "string"
+                },
+                "kg": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "length_cm": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "width_cm": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "height_cm": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      "events": {
+        "bsonType": "array",
+        "items": {
+          "oneOf": [
+            {
+              "bsonType": "object",
+              "required": [
+                "type",
+                "at",
+                "odometer"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "departed"
+                  ]
+                },
+                "at": {
+                  "bsonType": "date"
+                },
+                "odometer": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                }
+              }
+            },
+            {
+              "bsonType": "object",
+              "required": [
+                "type",
+                "at",
+                "odometer",
+                "location"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "checkpoint"
+                  ]
+                },
+                "at": {
+                  "bsonType": "date"
+                },
+                "odometer": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "location": {
+                  "bsonType": "string"
+                }
+              }
+            },
+            {
+              "bsonType": "object",
+              "required": [
+                "type",
+                "at",
+                "odometer",
+                "liters",
+                "unit_price",
+                "station"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "fuel"
+                  ]
+                },
+                "at": {
+                  "bsonType": "date"
+                },
+                "odometer": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "liters": {
+                  "bsonType": "decimal"
+                },
+                "unit_price": {
+                  "bsonType": "decimal"
+                },
+                "station": {
+                  "bsonType": "string"
+                }
+              }
+            },
+            {
+              "bsonType": "object",
+              "required": [
+                "type",
+                "at",
+                "minutes",
+                "reason"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "idle"
+                  ]
+                },
+                "at": {
+                  "bsonType": "date"
+                },
+                "minutes": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "reason": {
+                  "bsonType": "string"
+                }
+              }
+            },
+            {
+              "bsonType": "object",
+              "required": [
+                "type",
+                "at",
+                "incident_type",
+                "description",
+                "amount",
+                "at_fault"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "incident"
+                  ]
+                },
+                "at": {
+                  "bsonType": "date"
+                },
+                "incident_type": {
+                  "enum": [
+                    "accident",
+                    "fine",
+                    "breakdown",
+                    "damage"
+                  ]
+                },
+                "description": {
+                  "bsonType": "string"
+                },
+                "amount": {
+                  "bsonType": "decimal"
+                },
+                "at_fault": {
+                  "bsonType": "bool"
+                }
+              }
+            },
+            {
+              "bsonType": "object",
+              "required": [
+                "type",
+                "at",
+                "odometer",
+                "receiver"
+              ],
+              "properties": {
+                "type": {
+                  "enum": [
+                    "delivered"
+                  ]
+                },
+                "at": {
+                  "bsonType": "date"
+                },
+                "odometer": {
+                  "bsonType": [
+                    "int",
+                    "long"
+                  ]
+                },
+                "receiver": {
+                  "bsonType": "string"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "totals": {
+        "bsonType": "object",
+        "required": [
+          "distance_km",
+          "fuel_l",
+          "fuel_cost",
+          "freight_price"
+        ],
+        "properties": {
+          "distance_km": {
+            "bsonType": [
+              "int",
+              "long",
+              "null"
+            ]
+          },
+          "fuel_l": {
+            "bsonType": "decimal"
+          },
+          "fuel_cost": {
+            "bsonType": "decimal"
+          },
+          "freight_price": {
+            "bsonType": "decimal"
+          }
+        }
+      }
+    }
+  }
+}

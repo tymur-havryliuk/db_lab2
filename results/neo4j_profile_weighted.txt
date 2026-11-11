@@ -1,0 +1,21 @@
+PROFILE weighted
+parameters: {'from': 'Київ', 'to': 'Одеса'}
+
+MATCH (a:City {name: $from}), (b:City {name: $to})
+MATCH p = (a)-[:ROAD*1..6]-(b)
+WITH p, reduce(s = 0.0, r IN relationships(p) | s + r.km) AS km
+ORDER BY km ASC
+LIMIT 1
+RETURN [n IN nodes(p) | n.name] AS маршрут, length(p) AS переїздів, km AS км_разом
+
+result_available_after_ms=1  result_consumed_after_ms=85
+
+ProduceResults@neo4j               rows=       1 db_hits=        0 page_cache_hits=      0 details=маршрут, переїздів, км_разом
+  Projection@neo4j                 rows=       1 db_hits=        5 page_cache_hits=      0 details=[n IN nodes(p) | n.name] AS маршрут, length(p) AS переїздів, km AS км_разом
+    Projection@neo4j               rows=       1 db_hits=        0 page_cache_hits=      0 details=(a)-[anon_0*]-(b) AS p
+      Top@neo4j                    rows=       1 db_hits=        0 page_cache_hits=      0 details=km ASC LIMIT 1
+        Projection@neo4j           rows=    3742 db_hits=    21937 page_cache_hits=      0 details=reduce(s = $autodouble_0, r IN relationships((a)-[anon_0*]-(b)) | s + r.km) AS km
+          VarLengthExpand(Into)@neo4j rows=    3742 db_hits=   493691 page_cache_hits=      0 details=(a)-[anon_0:ROAD*..6]-(b)
+            CartesianProduct@neo4j rows=       1 db_hits=        0 page_cache_hits=      0 details=
+              NodeIndexSeek@neo4j  rows=       1 db_hits=        2 page_cache_hits=      0 details=RANGE INDEX a:City(name) WHERE name = $from
+              NodeIndexSeek@neo4j  rows=       1 db_hits=        2 page_cache_hits=      0 details=RANGE INDEX b:City(name) WHERE name = $to

@@ -1,0 +1,382 @@
+{
+ "params": {
+  "year": 2022
+ },
+ "server_ms": 198.0,
+ "notes": {
+  "totalKeysExamined": 131761,
+  "totalDocsExamined": 131761,
+  "nReturned": 15361,
+  "index": "ix_start",
+  "stage": null,
+  "stages": [
+   "FETCH",
+   "GROUP",
+   "IXSCAN"
+  ]
+ },
+ "plan": {
+  "explainVersion": "2",
+  "stages": [
+   {
+    "$cursor": {
+     "queryPlanner": {
+      "namespace": "fleet_bench.trips",
+      "parsedQuery": {
+       "$and": [
+        {
+         "status": {
+          "$eq": "completed"
+         }
+        },
+        {
+         "planned_start": {
+          "$lt": "2023-01-01 00:00:00"
+         }
+        },
+        {
+         "planned_start": {
+          "$gte": "2022-01-01 00:00:00"
+         }
+        }
+       ]
+      },
+      "indexFilterSet": false,
+      "queryHash": "EEFC5A02",
+      "planCacheShapeHash": "EEFC5A02",
+      "planCacheKey": "A0742382",
+      "optimizationTimeMillis": 0,
+      "maxIndexedOrSolutionsReached": false,
+      "maxIndexedAndSolutionsReached": false,
+      "maxScansToExplodeReached": false,
+      "prunedSimilarIndexes": false,
+      "winningPlan": {
+       "isCached": false,
+       "queryPlan": {
+        "stage": "GROUP",
+        "planNodeId": 4,
+        "inputStage": {
+         "stage": "FETCH",
+         "planNodeId": 2,
+         "filter": {
+          "status": {
+           "$eq": "completed"
+          }
+         },
+         "inputStage": {
+          "stage": "IXSCAN",
+          "planNodeId": 1,
+          "keyPattern": {
+           "planned_start": 1
+          },
+          "indexName": "ix_start",
+          "isMultiKey": false,
+          "multiKeyPaths": {
+           "planned_start": []
+          },
+          "isUnique": false,
+          "isSparse": false,
+          "isPartial": false,
+          "indexVersion": 2,
+          "direction": "forward",
+          "indexBounds": {
+           "planned_start": [
+            "[new Date(1640995200000), new Date(1672531200000))"
+           ]
+          }
+         }
+        }
+       },
+       "slotBasedPlan": {
+        "slots": "$$RESULT=s23 env: { s5 = {\"planned_start\" : 1}, s14 = TimeZoneDatabase(Brazil/East...America/Port_of_Spain) (timeZoneDB) }",
+        "stages": "[4] project [s23 = newObj(\"_id\", s20, \"n\", s21, \"rev\", s22)] \n[4] project [s20 = newObj(\"c\", s13, \"m\", s17), s21 = (convert ( s18, int32) ?: s18), s22 = doubleDoubleSumFinalize(s19)] \n[4] group [s13, s17] [s18 = count(), s19 = aggDoubleDoubleSum(s12)] spillSlots[s15, s16] mergingExprs[sum(s15), aggMergeDoubleDoubleSums(s16)] \n[4] project [s17 = \n    let [\n        l8.0 = month(s9, TimeZone(UTC)) \n    ] \n    in \n        if exists(l8.0) \n        then makeOwn(move(l8.0)) \n        else \n            if (typeMatch(s9, 1088) ?: true) \n            then null \n            else \n                if typeMatch(s9, 131712) \n                then Nothing \n                else fail(5157904, \"month parameter 'date' must be coercible to date\") \n] \n[4] project [s12 = traverseP(s10, lambda(l5.0) { getField(move(l5.0), \"freight_price\") }, 1), s13 = traverseP(s8, lambda(l6.0) { getField(move(l6.0), \"id\") }, 1)] \n[2] filter {traverseF(s11, lambda(l2.0) { ((move(l2.0) == \"completed\") ?: false) }, false)} \n[2] nlj inner [] [s1, s4, s2, s3, s5] \n    left \n        [1] ixseek KS(788000017E12EF9C0001) KS(78800001856AA0C80001) s3 s1 s4 s2 [] @\"1a95cbbd-235f-4d8d-847e-fdbc76b3c098\" @\"ix_start\" true \n    right \n        [2] limit 1ll \n        [2] seek s1 s6 s7 s4 s2 s3 s5 none none [s8 = customer, s9 = planned_start, s10 = totals, s11 = status] @\"1a95cbbd-235f-4d8d-847e-fdbc76b3c098\" true false \n"
+       }
+      },
+      "rejectedPlans": []
+     },
+     "executionStats": {
+      "executionSuccess": true,
+      "nReturned": 15361,
+      "executionTimeMillis": 198,
+      "totalKeysExamined": 131761,
+      "totalDocsExamined": 131761,
+      "executionStages": {
+       "stage": "project",
+       "planNodeId": 4,
+       "nReturned": 15361,
+       "executionTimeMillisEstimate": 172,
+       "opens": 1,
+       "closes": 1,
+       "saveState": 22,
+       "restoreState": 21,
+       "isEOF": 1,
+       "projections": {
+        "23": "newObj(\"_id\", s20, \"n\", s21, \"rev\", s22) "
+       },
+       "inputStage": {
+        "stage": "project",
+        "planNodeId": 4,
+        "nReturned": 15361,
+        "executionTimeMillisEstimate": 169,
+        "opens": 1,
+        "closes": 1,
+        "saveState": 22,
+        "restoreState": 21,
+        "isEOF": 1,
+        "projections": {
+         "20": "newObj(\"c\", s13, \"m\", s17) ",
+         "21": "(convert ( s18, int32) ?: s18) ",
+         "22": "doubleDoubleSumFinalize(s19) "
+        },
+        "inputStage": {
+         "stage": "group",
+         "planNodeId": 4,
+         "nReturned": 15361,
+         "executionTimeMillisEstimate": 169,
+         "opens": 1,
+         "closes": 1,
+         "saveState": 22,
+         "restoreState": 21,
+         "isEOF": 1,
+         "groupBySlots": [
+          13,
+          17
+         ],
+         "expressions": {
+          "18": "count() ",
+          "19": "aggDoubleDoubleSum(s12) ",
+          "initExprs": {
+           "18": null,
+           "19": null
+          }
+         },
+         "mergingExprs": {
+          "15": "sum(s15) ",
+          "16": "aggMergeDoubleDoubleSums(s16) "
+         },
+         "usedDisk": false,
+         "spills": 0,
+         "spilledBytes": 0,
+         "spilledRecords": 0,
+         "spilledDataStorageSize": 0,
+         "inputStage": {
+          "stage": "project",
+          "planNodeId": 4,
+          "nReturned": 124542,
+          "executionTimeMillisEstimate": 141,
+          "opens": 1,
+          "closes": 1,
+          "saveState": 22,
+          "restoreState": 21,
+          "isEOF": 1,
+          "projections": {
+           "17": "\n    let [\n        l8.0 = month(s9, TimeZone(UTC)) \n    ] \n    in \n        if exists(l8.0) \n        then makeOwn(move(l8.0)) \n        else \n            if (typeMatch(s9, 1088) ?: true) \n            then null \n            else \n                if typeMatch(s9, 131712) \n                then Nothing \n                else fail(5157904, \"month parameter 'date' must be coercible to date\") \n"
+          },
+          "inputStage": {
+           "stage": "project",
+           "planNodeId": 4,
+           "nReturned": 124542,
+           "executionTimeMillisEstimate": 141,
+           "opens": 1,
+           "closes": 1,
+           "saveState": 22,
+           "restoreState": 21,
+           "isEOF": 1,
+           "projections": {
+            "12": "traverseP(s10, lambda(l5.0) { getField(move(l5.0), \"freight_price\") }, 1) ",
+            "13": "traverseP(s8, lambda(l6.0) { getField(move(l6.0), \"id\") }, 1) "
+           },
+           "inputStage": {
+            "stage": "filter",
+            "planNodeId": 2,
+            "nReturned": 124542,
+            "executionTimeMillisEstimate": 141,
+            "opens": 1,
+            "closes": 1,
+            "saveState": 22,
+            "restoreState": 21,
+            "isEOF": 1,
+            "numTested": 131761,
+            "filter": "traverseF(s11, lambda(l2.0) { ((move(l2.0) == \"completed\") ?: false) }, false) ",
+            "inputStage": {
+             "stage": "nlj",
+             "planNodeId": 2,
+             "nReturned": 131761,
+             "executionTimeMillisEstimate": 138,
+             "opens": 1,
+             "closes": 1,
+             "saveState": 22,
+             "restoreState": 21,
+             "isEOF": 1,
+             "totalDocsExamined": 131761,
+             "totalKeysExamined": 131761,
+             "collectionScans": 0,
+             "collectionSeeks": 131761,
+             "indexScans": 0,
+             "indexSeeks": 1,
+             "indexesUsed": [
+              "ix_start"
+             ],
+             "innerOpens": 131761,
+             "innerCloses": 1,
+             "outerProjects": [],
+             "outerCorrelated": [
+              1,
+              4,
+              2,
+              3,
+              5
+             ],
+             "outerStage": {
+              "stage": "ixseek",
+              "planNodeId": 1,
+              "nReturned": 131761,
+              "executionTimeMillisEstimate": 12,
+              "opens": 1,
+              "closes": 1,
+              "saveState": 22,
+              "restoreState": 21,
+              "isEOF": 1,
+              "indexName": "ix_start",
+              "keysExamined": 131761,
+              "seeks": 1,
+              "numReads": 131762,
+              "indexKeySlot": 3,
+              "recordIdSlot": 1,
+              "snapshotIdSlot": 4,
+              "indexIdentSlot": 2,
+              "outputSlots": [],
+              "indexKeysToInclude": "00000000000000000000000000000000",
+              "seekKeyLow": "KS(788000017E12EF9C0001) ",
+              "seekKeyHigh": "KS(78800001856AA0C80001) "
+             },
+             "innerStage": {
+              "stage": "limit",
+              "planNodeId": 2,
+              "nReturned": 131761,
+              "executionTimeMillisEstimate": 117,
+              "opens": 131761,
+              "closes": 1,
+              "saveState": 22,
+              "restoreState": 21,
+              "isEOF": 1,
+              "limit": 1,
+              "inputStage": {
+               "stage": "seek",
+               "planNodeId": 2,
+               "nReturned": 131761,
+               "executionTimeMillisEstimate": 117,
+               "opens": 131761,
+               "closes": 1,
+               "saveState": 22,
+               "restoreState": 21,
+               "isEOF": 0,
+               "numReads": 131761,
+               "recordSlot": 6,
+               "recordIdSlot": 7,
+               "seekRecordIdSlot": 1,
+               "snapshotIdSlot": 4,
+               "indexIdentSlot": 2,
+               "indexKeySlot": 3,
+               "indexKeyPatternSlot": 5,
+               "scanFieldNames": [
+                "customer",
+                "planned_start",
+                "totals",
+                "status"
+               ],
+               "scanFieldSlots": [
+                8,
+                9,
+                10,
+                11
+               ]
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    },
+    "nReturned": 15361,
+    "executionTimeMillisEstimate": 188
+   },
+   {
+    "$sort": {
+     "sortKey": {
+      "_id.c": 1,
+      "_id.m": 1
+     }
+    },
+    "totalDataSizeSortedBytesEstimate": 9001546,
+    "usedDisk": false,
+    "spills": 0,
+    "spilledDataStorageSize": 0,
+    "nReturned": 15361,
+    "executionTimeMillisEstimate": 194
+   }
+  ],
+  "queryShapeHash": "72365CAFC2E1F478E163D93DDCDBEB48080FD3A0491065CB3A59C29AB2E65F81",
+  "serverInfo": {
+   "host": "e9db2ef717cd",
+   "port": 27017,
+   "version": "8.2.12",
+   "gitVersion": "0f912e80210b8fdfdcec618b14b6c0fced055cb8"
+  },
+  "serverParameters": {
+   "internalQueryFacetBufferSizeBytes": 104857600,
+   "internalQueryFacetMaxOutputDocSizeBytes": 104857600,
+   "internalLookupStageIntermediateDocumentMaxSizeBytes": 104857600,
+   "internalDocumentSourceGroupMaxMemoryBytes": 104857600,
+   "internalQueryMaxBlockingSortMemoryUsageBytes": 104857600,
+   "internalQueryProhibitBlockingMergeOnMongoS": 0,
+   "internalQueryMaxAddToSetBytes": 104857600,
+   "internalDocumentSourceSetWindowFieldsMaxMemoryBytes": 104857600,
+   "internalQueryFrameworkControl": "trySbeRestricted",
+   "internalQueryPlannerIgnoreIndexWithCollationForRegex": 1
+  },
+  "command": {
+   "aggregate": "trips",
+   "pipeline": [
+    {
+     "$match": {
+      "planned_start": {
+       "$gte": "2022-01-01 00:00:00",
+       "$lt": "2023-01-01 00:00:00"
+      },
+      "status": "completed"
+     }
+    },
+    {
+     "$group": {
+      "_id": {
+       "c": "$customer.id",
+       "m": {
+        "$month": "$planned_start"
+       }
+      },
+      "n": {
+       "$sum": 1
+      },
+      "rev": {
+       "$sum": "$totals.freight_price"
+      }
+     }
+    },
+    {
+     "$sort": {
+      "_id.c": 1,
+      "_id.m": 1
+     }
+    }
+   ],
+   "cursor": {},
+   "$db": "fleet_bench"
+  },
+  "ok": 1.0
+ }
+}

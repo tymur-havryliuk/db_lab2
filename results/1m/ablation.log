@@ -1,0 +1,23 @@
+[s2]
+  s2       S2     sql    base_index             p50=    0.297  p95=    0.382 docs_examined=- idx=['cities_pkey', 'customers_pkey', 'ix_trips_driver_start', 'routes_pkey']
+  s2       S2     jsonb  base_index             p50=    0.673  p95=    0.990 docs_examined=- idx=['ix_docs_driver_start']
+  s2       S2     mongo  base_index             p50=    2.872  p95=    7.843 docs_examined=130 idx=ix_driver_start
+  s2       S2     sql    index_with_tiebreak    p50=    0.421  p95=    0.569 docs_examined=- idx=['ab_trips_driver_start_tn', 'cities_pkey', 'customers_pkey', 'routes_pkey']
+  s2       S2     jsonb  index_with_tiebreak    p50=    0.713  p95=    1.017 docs_examined=- idx=['ab_docs_driver_start_tn']
+  s2       S2     mongo  index_with_tiebreak    p50=    0.751  p95=    0.873 docs_examined=20 idx=ab_driver_start_id
+[snapshot]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/tymur.havryliuk/uni/DB/lab2/lab2/bench/ablation.py", line 327, in <module>
+    main()
+    ~~~~^^
+  File "/Users/tymur.havryliuk/uni/DB/lab2/lab2/bench/ablation.py", line 319, in main
+    getattr(ab, name)()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/Users/tymur.havryliuk/uni/DB/lab2/lab2/bench/ablation.py", line 141, in snapshot
+    c.execute(self.SNAP_DDL)
+    ~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/tymur.havryliuk/uni/DB/lab2/.venv/lib/python3.13/site-packages/psycopg/connection.py", line 304, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.ActiveSqlTransaction: VACUUM cannot run inside a transaction block

@@ -1,0 +1,33 @@
+PROFILE shared_drivers
+parameters: {}
+
+MATCH (d1:Driver)-[:DROVE]->(t1:Trip)
+WITH d1, count(t1) AS рейсів
+ORDER BY рейсів DESC, d1.id
+LIMIT 1
+MATCH (d1)-[:DROVE]->(:Trip)-[:FOR]->(c:Customer)<-[:FOR]-(:Trip)<-[:DROVE]-(d2:Driver)
+WHERE d2 <> d1
+RETURN d1.full_name AS водій, d2.full_name AS колега, count(DISTINCT c) AS спільних_замовників
+ORDER BY спільних_замовників DESC, колега
+LIMIT 10
+
+result_available_after_ms=1  result_consumed_after_ms=52
+
+ProduceResults@neo4j               rows=      10 db_hits=        0 page_cache_hits=      0 details=водій, колега, спільних_замовників
+  Top@neo4j                        rows=      10 db_hits=        0 page_cache_hits=      0 details=спільних_замовників DESC, колега ASC LIMIT 10
+    EagerAggregation@neo4j         rows=     793 db_hits=    74907 page_cache_hits=      0 details=cache[d1.full_name] AS водій, d2.full_name AS колега, count(DISTINCT c) AS спільних_замовників
+      Filter@neo4j                 rows=   74907 db_hits=    74907 page_cache_hits=      0 details=NOT d2 = d1 AND NOT anon_6 = anon_1 AND d2:Driver
+        Expand(All)@neo4j          rows=   76295 db_hits=   457770 page_cache_hits=      0 details=(anon_5)<-[anon_6:DROVE]-(d2)
+          Filter@neo4j             rows=   76295 db_hits=    76295 page_cache_hits=      0 details=NOT anon_4 = anon_3 AND anon_5:Trip
+            Expand(All)@neo4j      rows=   76485 db_hits=    76971 page_cache_hits=      0 details=(c)<-[anon_4:FOR]-(anon_5)
+              Filter@neo4j         rows=     190 db_hits=      190 page_cache_hits=      0 details=c:Customer
+                Expand(All)@neo4j  rows=     190 db_hits=     1140 page_cache_hits=      0 details=(anon_2)-[anon_3:FOR]->(c)
+                  Filter@neo4j     rows=     190 db_hits=      190 page_cache_hits=      0 details=anon_2:Trip
+                    Expand(All)@neo4j rows=     190 db_hits=      192 page_cache_hits=      0 details=(d1)-[anon_1:DROVE]->(anon_2)
+                      CacheProperties@neo4j rows=       1 db_hits=        1 page_cache_hits=      0 details=cache[d1.full_name]
+                        Top@neo4j  rows=       1 db_hits=        0 page_cache_hits=      0 details=рейсів DESC, `d1.id` ASC LIMIT 1
+                          Projection@neo4j rows=     800 db_hits=      800 page_cache_hits=      0 details=d1.id AS `d1.id`
+                            OrderedAggregation@neo4j rows=     800 db_hits=        0 page_cache_hits=      0 details=d1, count(t1) AS рейсів
+                              Filter@neo4j rows=   10000 db_hits=    10000 page_cache_hits=      0 details=t1:Trip
+                                Expand(All)@neo4j rows=   10000 db_hits=    10815 page_cache_hits=      0 details=(d1)-[anon_0:DROVE]->(t1)
+                                  NodeByLabelScan@neo4j rows=     800 db_hits=      801 page_cache_hits=      0 details=d1:Driver

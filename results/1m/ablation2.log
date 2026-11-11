@@ -1,0 +1,43 @@
+[snapshot]
+  snapshot S1     sql    normalized_joins       p50=    1.246  p95=    1.691 
+  snapshot S1     sql    snapshot_columns       p50=    0.332  p95=    0.382 
+  snapshot S6all  sql    snapshot_columns       p50=    6.380  p95=   30.423 
+  snapshot S6all top customer: 1911.6 ms, changed=169131; median changed=110
+  snapshot S6open sql    snapshot_columns       p50=    1.524  p95=    3.666 
+  snapshot S6open top customer: 545.3 ms, changed=17036; median changed=8
+[s3]
+  s3       S3-checkpoint sql    multi_statement        p50=    1.029  p95=    1.382 
+  s3       S3-checkpoint sql    plpgsql_function       p50=    0.441  p95=    0.696 
+  s3       S3-fuel sql    multi_statement        p50=    1.083  p95=    1.461 
+  s3       S3-fuel sql    plpgsql_function       p50=    0.493  p95=    0.875 
+[s4]
+  s4       S4_b100 sql    executemany            p50=   29.788  p95=   44.666 
+  s4       S4_b1000 sql    executemany            p50=  247.461  p95=  259.058 
+  s4       S4_b100 sql    copy                   p50=   13.204  p95=   18.022 
+  s4       S4_b1000 sql    copy                   p50=   97.088  p95=  109.783 
+  s4       S4_b100 jsonb  executemany            p50=   10.101  p95=   14.290 
+  s4       S4_b1000 jsonb  executemany            p50=   75.938  p95=  161.634 
+  s4       S4_b100 jsonb  copy                   p50=    5.929  p95=    7.188 
+  s4       S4_b1000 jsonb  copy                   p50=   46.077  p95=   51.599 
+[decode]
+  decode   S1     sql    full_canonical_dict    p50=    0.485  p95=    0.655 
+  decode   S1     sql    raw_fetch_no_decode    p50=    0.297  p95=    0.353 sql: рядок з json_agg без збирання dict; jsonb: текст; mongo: RawBSONDocument
+  decode   S1     jsonb  full_canonical_dict    p50=    0.224  p95=    0.444 
+  decode   S1     jsonb  raw_fetch_no_decode    p50=    0.178  p95=    0.198 sql: рядок з json_agg без збирання dict; jsonb: текст; mongo: RawBSONDocument
+  decode   S1     mongo  full_canonical_dict    p50=    0.270  p95=    0.298 
+  decode   S1     mongo  raw_fetch_no_decode    p50=    0.184  p95=    0.200 sql: рядок з json_agg без збирання dict; jsonb: текст; mongo: RawBSONDocument
+[growth]
+  growth   sql: готово
+  growth   jsonb: готово
+  growth   mongo: готово
+[s8mix]
+  S8   sql   workers=1     1740.5 ops/s  p50=   0.445  p99=   1.405 ms  errors=0
+  S8   sql   workers=8    10218.5 ops/s  p50=   0.568  p99=   1.893 ms  errors=0
+  S8   sql   workers=32    5866.1 ops/s  p50=   2.030  p99=  68.088 ms  errors=0
+  S8   jsonb workers=1     1672.4 ops/s  p50=   0.287  p99=   3.746 ms  errors=0
+  S8   jsonb workers=8     8501.1 ops/s  p50=   0.393  p99=   6.668 ms  errors=0
+  S8   jsonb workers=32    5824.0 ops/s  p50=   1.196  p99=  69.860 ms  errors=0
+  S8   mongo workers=1      791.5 ops/s  p50=   0.753  p99=   7.212 ms  errors=0
+  S8   mongo workers=8     2366.2 ops/s  p50=   0.523  p99=  71.078 ms  errors=0
+  S8   mongo workers=32    1516.5 ops/s  p50=   3.454  p99=  98.902 ms  errors=0
+[verify after ablations] розбіжностей: 0

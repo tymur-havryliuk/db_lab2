@@ -1,0 +1,126 @@
+{
+ "params": {
+  "adr_class": 3,
+  "date_from": "2024-12-19 00:00:00+00:00",
+  "date_to": "2025-01-18 00:00:00+00:00"
+ },
+ "server_ms": 30.007,
+ "notes": {
+  "planning_ms": 0.143,
+  "execution_ms": 29.864,
+  "shared_hit": 1053,
+  "shared_read": 1283,
+  "top_node": "Incremental Sort",
+  "indexes": [
+   "ix_docs_start"
+  ],
+  "scans": [
+   "Index Scan"
+  ]
+ },
+ "plan": [
+  {
+   "Plan": {
+    "Node Type": "Incremental Sort",
+    "Parallel Aware": false,
+    "Async Capable": false,
+    "Startup Cost": 1.96,
+    "Total Cost": 2383.95,
+    "Plan Rows": 1523,
+    "Plan Width": 47,
+    "Actual Startup Time": 1.05,
+    "Actual Total Time": 29.833,
+    "Actual Rows": 1128,
+    "Actual Loops": 1,
+    "Sort Key": [
+     "((doc ->> 'planned_start'::text))",
+     "trip_number"
+    ],
+    "Presorted Key": [
+     "((doc ->> 'planned_start'::text))"
+    ],
+    "Full-sort Groups": {
+     "Group Count": 36,
+     "Sort Methods Used": [
+      "quicksort"
+     ],
+     "Sort Space Memory": {
+      "Average Sort Space Used": 27,
+      "Peak Sort Space Used": 27
+     }
+    },
+    "Shared Hit Blocks": 1053,
+    "Shared Read Blocks": 1283,
+    "Shared Dirtied Blocks": 0,
+    "Shared Written Blocks": 0,
+    "Local Hit Blocks": 0,
+    "Local Read Blocks": 0,
+    "Local Dirtied Blocks": 0,
+    "Local Written Blocks": 0,
+    "Temp Read Blocks": 0,
+    "Temp Written Blocks": 0,
+    "I/O Read Time": 1.945,
+    "I/O Write Time": 0.0,
+    "Temp I/O Read Time": 0.0,
+    "Temp I/O Write Time": 0.0,
+    "Plans": [
+     {
+      "Node Type": "Index Scan",
+      "Parent Relationship": "Outer",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Scan Direction": "Forward",
+      "Index Name": "ix_docs_start",
+      "Relation Name": "trip_docs",
+      "Alias": "trip_docs",
+      "Startup Cost": 0.42,
+      "Total Cost": 2315.49,
+      "Plan Rows": 1523,
+      "Plan Width": 47,
+      "Actual Startup Time": 0.094,
+      "Actual Total Time": 29.593,
+      "Actual Rows": 1128,
+      "Actual Loops": 1,
+      "Index Cond": "(((doc ->> 'planned_start'::text) >= '2024-12-19T00:00:00Z'::text) AND ((doc ->> 'planned_start'::text) < '2025-01-18T00:00:00Z'::text))",
+      "Rows Removed by Index Recheck": 0,
+      "Filter": "((doc -> 'cargo'::text) @> '[{\"adr_class\": 3}]'::jsonb)",
+      "Rows Removed by Filter": 9661,
+      "Shared Hit Blocks": 1053,
+      "Shared Read Blocks": 1283,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0,
+      "I/O Read Time": 1.945,
+      "I/O Write Time": 0.0,
+      "Temp I/O Read Time": 0.0,
+      "Temp I/O Write Time": 0.0
+     }
+    ]
+   },
+   "Planning": {
+    "Shared Hit Blocks": 0,
+    "Shared Read Blocks": 1,
+    "Shared Dirtied Blocks": 0,
+    "Shared Written Blocks": 0,
+    "Local Hit Blocks": 0,
+    "Local Read Blocks": 0,
+    "Local Dirtied Blocks": 0,
+    "Local Written Blocks": 0,
+    "Temp Read Blocks": 0,
+    "Temp Written Blocks": 0,
+    "I/O Read Time": 0.049,
+    "I/O Write Time": 0.0,
+    "Temp I/O Read Time": 0.0,
+    "Temp I/O Write Time": 0.0
+   },
+   "Planning Time": 0.143,
+   "Triggers": [],
+   "Execution Time": 29.864
+  }
+ ]
+}

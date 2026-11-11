@@ -1,0 +1,108 @@
+{
+ "params": {
+  "driver_id": 79,
+  "date_from": "2021-07-25 00:00:00+00:00",
+  "date_to": "2022-07-25 00:00:00+00:00",
+  "page": 1
+ },
+ "server_ms": 0.071,
+ "notes": {
+  "planning_ms": 0.059,
+  "execution_ms": 0.012,
+  "shared_hit": 2,
+  "shared_read": 0,
+  "top_node": "Limit",
+  "indexes": [
+   "ix_docs_driver_start"
+  ],
+  "scans": [
+   "Index Scan"
+  ]
+ },
+ "plan": [
+  {
+   "Plan": {
+    "Node Type": "Limit",
+    "Parallel Aware": false,
+    "Async Capable": false,
+    "Startup Cost": 2.54,
+    "Total Cost": 4.79,
+    "Plan Rows": 1,
+    "Plan Width": 207,
+    "Actual Startup Time": 0.007,
+    "Actual Total Time": 0.007,
+    "Actual Rows": 0,
+    "Actual Loops": 1,
+    "Shared Hit Blocks": 2,
+    "Shared Read Blocks": 0,
+    "Shared Dirtied Blocks": 0,
+    "Shared Written Blocks": 0,
+    "Local Hit Blocks": 0,
+    "Local Read Blocks": 0,
+    "Local Dirtied Blocks": 0,
+    "Local Written Blocks": 0,
+    "Temp Read Blocks": 0,
+    "Temp Written Blocks": 0,
+    "I/O Read Time": 0.0,
+    "I/O Write Time": 0.0,
+    "Temp I/O Read Time": 0.0,
+    "Temp I/O Write Time": 0.0,
+    "Plans": [
+     {
+      "Node Type": "Index Scan",
+      "Parent Relationship": "Outer",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Scan Direction": "Forward",
+      "Index Name": "ix_docs_driver_start",
+      "Relation Name": "trip_docs",
+      "Alias": "trip_docs",
+      "Startup Cost": 0.29,
+      "Total Cost": 2.54,
+      "Plan Rows": 1,
+      "Plan Width": 207,
+      "Actual Startup Time": 0.007,
+      "Actual Total Time": 0.007,
+      "Actual Rows": 0,
+      "Actual Loops": 1,
+      "Index Cond": "(((((doc -> 'driver'::text) ->> 'id'::text))::integer = '79'::smallint) AND ((doc ->> 'planned_start'::text) >= '2021-07-25T00:00:00Z'::text) AND ((doc ->> 'planned_start'::text) < '2022-07-25T00:00:00Z'::text))",
+      "Rows Removed by Index Recheck": 0,
+      "Shared Hit Blocks": 2,
+      "Shared Read Blocks": 0,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0,
+      "I/O Read Time": 0.0,
+      "I/O Write Time": 0.0,
+      "Temp I/O Read Time": 0.0,
+      "Temp I/O Write Time": 0.0
+     }
+    ]
+   },
+   "Planning": {
+    "Shared Hit Blocks": 0,
+    "Shared Read Blocks": 0,
+    "Shared Dirtied Blocks": 0,
+    "Shared Written Blocks": 0,
+    "Local Hit Blocks": 0,
+    "Local Read Blocks": 0,
+    "Local Dirtied Blocks": 0,
+    "Local Written Blocks": 0,
+    "Temp Read Blocks": 0,
+    "Temp Written Blocks": 0,
+    "I/O Read Time": 0.0,
+    "I/O Write Time": 0.0,
+    "Temp I/O Read Time": 0.0,
+    "Temp I/O Write Time": 0.0
+   },
+   "Planning Time": 0.059,
+   "Triggers": [],
+   "Execution Time": 0.012
+  }
+ ]
+}

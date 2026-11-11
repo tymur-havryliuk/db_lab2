@@ -1,0 +1,13 @@
+scale,variant,object,table_bytes,index_bytes,rows,uncompressed_bytes
+1m,sql,cities,40960,16384,60,
+1m,sql,customers,229376,65536,2000,
+1m,sql,drivers,122880,98304,800,
+1m,sql,fuel_transactions,186294272,130039808,1729007,
+1m,sql,incidents,11042816,4677632,86169,
+1m,sql,routes,65536,57344,400,
+1m,sql,trip_cargo_items,281845760,103972864,3000381,
+1m,jsonb,trip_docs,1638440960,191954944,999885,
+1m,sql,trip_events,729350144,261636096,8297442,
+1m,sql,trips,139329536,139436032,1000000,
+1m,sql,vehicles,73728,122880,500,
+1m,mongo,trips,777273344,80883712,1000000,1834755698

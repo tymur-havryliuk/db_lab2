@@ -1,0 +1,39 @@
+scale,ablation,scenario,variant,mode,n,p50_ms,p95_ms,p99_ms,extra
+1m,s2,S2,sql,base_index,200,0.2969,0.3823,0.5863,"docs_examined=- idx=['cities_pkey', 'customers_pkey', 'ix_trips_driver_start', 'routes_pkey']"
+1m,s2,S2,jsonb,base_index,200,0.6732,0.9898,1.0356,docs_examined=- idx=['ix_docs_driver_start']
+1m,s2,S2,mongo,base_index,200,2.8717,7.8433,12.3522,docs_examined=130 idx=ix_driver_start
+1m,s2,S2,sql,index_with_tiebreak,200,0.4215,0.5694,0.782,"docs_examined=- idx=['ab_trips_driver_start_tn', 'cities_pkey', 'customers_pkey', 'routes_pkey']"
+1m,s2,S2,jsonb,index_with_tiebreak,200,0.7126,1.0167,1.0937,docs_examined=- idx=['ab_docs_driver_start_tn']
+1m,s2,S2,mongo,index_with_tiebreak,200,0.7512,0.873,0.9991,docs_examined=20 idx=ab_driver_start_id
+1m,snapshot,S1,sql,normalized_joins,200,1.2462,1.6909,1.8146,
+1m,snapshot,S1,sql,snapshot_columns,200,0.3322,0.3821,0.477,
+1m,snapshot,S6all,sql,snapshot_columns,15,6.3804,30.4235,41.1708,
+1m,snapshot,S6all_top,sql,snapshot_columns,1,1911.611,,,changed=169131
+1m,snapshot,S6open,sql,snapshot_columns,15,1.5239,3.6658,4.4192,
+1m,snapshot,S6open_top,sql,snapshot_columns,1,545.326,,,changed=17036
+1m,s3,S3-checkpoint,sql,multi_statement,200,1.029,1.3816,1.5811,
+1m,s3,S3-checkpoint,sql,plpgsql_function,200,0.4406,0.6961,0.8987,
+1m,s3,S3-fuel,sql,multi_statement,200,1.0835,1.4612,1.5782,
+1m,s3,S3-fuel,sql,plpgsql_function,200,0.4927,0.8751,1.2801,
+1m,s4,S4_b100,sql,executemany,20,29.7885,44.6661,55.3223,
+1m,s4,S4_b100_tps,sql,executemany,20,3357.0,,,trips/s за p50
+1m,s4,S4_b1000,sql,executemany,5,247.4608,259.0579,261.2685,
+1m,s4,S4_b1000_tps,sql,executemany,5,4041.0,,,trips/s за p50
+1m,s4,S4_b100,sql,copy,20,13.2045,18.0218,20.2431,
+1m,s4,S4_b100_tps,sql,copy,20,7573.2,,,trips/s за p50
+1m,s4,S4_b1000,sql,copy,5,97.0883,109.7832,110.9845,
+1m,s4,S4_b1000_tps,sql,copy,5,10299.9,,,trips/s за p50
+1m,s4,S4_b100,jsonb,executemany,20,10.101,14.2896,16.3292,
+1m,s4,S4_b100_tps,jsonb,executemany,20,9900.1,,,trips/s за p50
+1m,s4,S4_b1000,jsonb,executemany,5,75.9382,161.6343,175.9719,
+1m,s4,S4_b1000_tps,jsonb,executemany,5,13168.6,,,trips/s за p50
+1m,s4,S4_b100,jsonb,copy,20,5.929,7.1878,7.4297,
+1m,s4,S4_b100_tps,jsonb,copy,20,16866.3,,,trips/s за p50
+1m,s4,S4_b1000,jsonb,copy,5,46.0771,51.5994,52.4962,
+1m,s4,S4_b1000_tps,jsonb,copy,5,21702.8,,,trips/s за p50
+1m,decode,S1,sql,full_canonical_dict,200,0.485,0.6548,0.718,
+1m,decode,S1,sql,raw_fetch_no_decode,200,0.2972,0.3532,0.3877,sql: рядок з json_agg без збирання dict; jsonb: текст; mongo: RawBSONDocument
+1m,decode,S1,jsonb,full_canonical_dict,200,0.2242,0.4436,0.5941,
+1m,decode,S1,jsonb,raw_fetch_no_decode,200,0.1776,0.1983,0.2123,sql: рядок з json_agg без збирання dict; jsonb: текст; mongo: RawBSONDocument
+1m,decode,S1,mongo,full_canonical_dict,200,0.2699,0.2984,0.3194,
+1m,decode,S1,mongo,raw_fetch_no_decode,200,0.1837,0.2002,0.2126,sql: рядок з json_agg без збирання dict; jsonb: текст; mongo: RawBSONDocument

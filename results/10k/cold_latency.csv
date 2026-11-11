@@ -1,0 +1,289 @@
+scale,scenario,variant,cache,iter,client_us,rows,param
+10k,S1,sql,cold,0,8802.0,1,{'trip_number': 'TR-2023-001160'}
+10k,S1,sql,cold,1,2198.4,1,{'trip_number': 'TR-2022-001095'}
+10k,S1,sql,cold,2,1814.2,1,{'trip_number': 'TR-2024-000347'}
+10k,S1,sql,cold,3,1539.3,1,{'trip_number': 'TR-2021-000153'}
+10k,S1,sql,cold,4,1474.0,1,{'trip_number': 'TR-2026-001277'}
+10k,S1,sql,cold,5,1805.8,1,{'trip_number': 'TR-2026-001748'}
+10k,S1,sql,cold,6,1880.0,1,{'trip_number': 'TR-2023-000598'}
+10k,S1,sql,cold,7,1652.4,1,{'trip_number': 'TR-2024-000021'}
+10k,S1,sql,cold,8,1689.6,1,{'trip_number': 'TR-2025-000322'}
+10k,S1,sql,cold,9,1255.2,1,{'trip_number': 'TR-2026-002045'}
+10k,S1,sql,cold,10,1342.2,1,{'trip_number': 'TR-2025-000862'}
+10k,S1,sql,cold,11,849.3,1,{'trip_number': 'TR-2021-000520'}
+10k,S1,sql,cold,12,951.8,1,{'trip_number': 'TR-2021-001169'}
+10k,S1,sql,cold,13,1129.6,1,{'trip_number': 'TR-2021-000548'}
+10k,S1,sql,cold,14,805.2,1,{'trip_number': 'TR-2026-000258'}
+10k,S1,sql,cold,15,832.8,1,{'trip_number': 'TR-2024-001087'}
+10k,S1,sql,cold,16,1099.5,1,{'trip_number': 'TR-2023-000628'}
+10k,S1,sql,cold,17,893.5,1,{'trip_number': 'TR-2025-000923'}
+10k,S1,sql,cold,18,735.4,1,{'trip_number': 'TR-2026-001838'}
+10k,S1,sql,cold,19,839.5,1,{'trip_number': 'TR-2023-000784'}
+10k,S1,sql,cold,20,775.0,1,{'trip_number': 'TR-2024-001221'}
+10k,S1,sql,cold,21,1018.0,1,{'trip_number': 'TR-2024-000253'}
+10k,S1,sql,cold,22,954.9,1,{'trip_number': 'TR-2022-000530'}
+10k,S1,sql,cold,23,797.2,1,{'trip_number': 'TR-2026-001635'}
+10k,S1,sql,cold,24,883.6,1,{'trip_number': 'TR-2023-000925'}
+10k,S1,sql,cold,25,505.4,1,{'trip_number': 'TR-2026-001879'}
+10k,S1,sql,cold,26,885.9,1,{'trip_number': 'TR-2022-000714'}
+10k,S1,sql,cold,27,887.6,1,{'trip_number': 'TR-2022-000261'}
+10k,S1,sql,cold,28,918.1,1,{'trip_number': 'TR-2024-000530'}
+10k,S1,sql,cold,29,875.8,1,{'trip_number': 'TR-2020-000767'}
+10k,S2,sql,cold,0,4502.5,0,"{'driver_id': 389, 'date_from': datetime.datetime(2023, 2, 14, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 2, 14, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,sql,cold,1,912.2,0,"{'driver_id': 105, 'date_from': datetime.datetime(2024, 2, 13, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 2, 12, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,sql,cold,2,1722.2,3,"{'driver_id': 510, 'date_from': datetime.datetime(2024, 3, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 3, 30, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,3,657.0,0,"{'driver_id': 459, 'date_from': datetime.datetime(2024, 7, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 7, 23, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,sql,cold,4,685.3,0,"{'driver_id': 179, 'date_from': datetime.datetime(2021, 9, 21, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 9, 21, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,5,717.7,0,"{'driver_id': 786, 'date_from': datetime.datetime(2023, 7, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 7, 19, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,6,814.2,4,"{'driver_id': 774, 'date_from': datetime.datetime(2021, 5, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 5, 23, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,sql,cold,7,547.1,0,"{'driver_id': 568, 'date_from': datetime.datetime(2022, 2, 8, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 2, 8, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,sql,cold,8,592.0,0,"{'driver_id': 612, 'date_from': datetime.datetime(2022, 1, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 1, 17, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,sql,cold,9,477.1,0,"{'driver_id': 73, 'date_from': datetime.datetime(2022, 10, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 10, 27, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,sql,cold,10,518.5,0,"{'driver_id': 189, 'date_from': datetime.datetime(2020, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,11,465.5,0,"{'driver_id': 432, 'date_from': datetime.datetime(2023, 1, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 1, 30, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,sql,cold,12,337.1,0,"{'driver_id': 26, 'date_from': datetime.datetime(2020, 3, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 3, 27, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,13,380.8,0,"{'driver_id': 799, 'date_from': datetime.datetime(2020, 8, 15, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 8, 15, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,14,323.2,0,"{'driver_id': 667, 'date_from': datetime.datetime(2022, 3, 4, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 3, 4, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,sql,cold,15,190.6,0,"{'driver_id': 185, 'date_from': datetime.datetime(2023, 6, 12, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 6, 11, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,16,283.8,0,"{'driver_id': 691, 'date_from': datetime.datetime(2025, 5, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 5, 2, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,sql,cold,17,206.0,0,"{'driver_id': 130, 'date_from': datetime.datetime(2021, 4, 16, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 4, 16, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,sql,cold,18,593.3,1,"{'driver_id': 368, 'date_from': datetime.datetime(2021, 10, 5, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 10, 5, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,sql,cold,19,352.5,0,"{'driver_id': 68, 'date_from': datetime.datetime(2020, 11, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 11, 27, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,20,280.0,2,"{'driver_id': 724, 'date_from': datetime.datetime(2023, 11, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 11, 29, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,sql,cold,21,269.9,1,"{'driver_id': 461, 'date_from': datetime.datetime(2024, 9, 9, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 9, 9, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,sql,cold,22,282.5,0,"{'driver_id': 348, 'date_from': datetime.datetime(2024, 1, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 1, 16, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,23,298.7,0,"{'driver_id': 511, 'date_from': datetime.datetime(2022, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,24,289.2,0,"{'driver_id': 318, 'date_from': datetime.datetime(2022, 10, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 10, 2, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,25,249.2,0,"{'driver_id': 437, 'date_from': datetime.datetime(2022, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,26,251.9,0,"{'driver_id': 151, 'date_from': datetime.datetime(2025, 9, 3, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 9, 3, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,sql,cold,27,326.3,0,"{'driver_id': 440, 'date_from': datetime.datetime(2021, 10, 26, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 10, 26, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,28,295.4,0,"{'driver_id': 444, 'date_from': datetime.datetime(2024, 4, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 4, 20, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,sql,cold,29,262.4,3,"{'driver_id': 749, 'date_from': datetime.datetime(2024, 1, 22, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 1, 21, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S7,sql,cold,0,4052.9,7,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 5, 31, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2020, 6, 30, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,1,866.9,12,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 9, 3, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 10, 3, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,2,920.6,13,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 1, 19, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 2, 18, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,3,855.8,6,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 8, 19, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 9, 18, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,4,772.4,12,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 5, 16, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 6, 15, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,5,1022.7,11,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 11, 13, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 12, 13, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,6,803.5,11,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 11, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 12, 27, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,7,566.2,10,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 2, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 3, 25, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,8,771.6,17,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 7, 8, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 8, 7, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,9,671.9,10,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 12, 14, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 1, 13, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,10,512.2,14,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 4, 16, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 5, 16, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,11,576.5,9,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 3, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 4, 29, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,12,492.8,9,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 6, 11, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 7, 11, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,13,377.0,12,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 10, 7, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 11, 6, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,14,381.8,8,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 4, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 5, 17, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,15,395.7,11,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 9, 7, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 10, 7, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,16,420.3,11,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 2, 11, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 3, 12, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,17,452.8,13,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 1, 31, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 3, 2, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,18,387.5,4,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 8, 4, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 9, 3, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,19,442.9,15,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 7, 28, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 8, 27, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,20,404.9,7,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 7, 2, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,21,444.8,9,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 5, 14, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2020, 6, 13, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,22,440.4,9,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 12, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 1, 1, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,23,409.9,9,"{'adr_class': 3, 'date_from': datetime.datetime(2022, 12, 19, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 1, 18, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,24,352.2,10,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 9, 11, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 10, 11, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,25,373.5,10,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 7, 2, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,26,372.4,11,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 1, 1, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 1, 31, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,27,356.5,9,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 3, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 4, 22, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,28,364.1,14,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 6, 4, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 7, 4, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,sql,cold,29,343.2,15,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 6, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 7, 17, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S5a,sql,cold,0,4359.9,713,{'year': 2023}
+10k,S5a,sql,cold,1,5116.3,713,{'year': 2023}
+10k,S5a,sql,cold,2,5292.6,720,{'year': 2025}
+10k,S5b,sql,cold,0,4277.1,432,{'year': 2023}
+10k,S5b,sql,cold,1,3937.7,422,{'year': 2021}
+10k,S5b,sql,cold,2,3959.4,410,{'year': 2020}
+10k,S1,jsonb,cold,0,1242.2,1,{'trip_number': 'TR-2023-001160'}
+10k,S1,jsonb,cold,1,635.8,1,{'trip_number': 'TR-2022-001095'}
+10k,S1,jsonb,cold,2,436.1,1,{'trip_number': 'TR-2024-000347'}
+10k,S1,jsonb,cold,3,469.7,1,{'trip_number': 'TR-2021-000153'}
+10k,S1,jsonb,cold,4,455.7,1,{'trip_number': 'TR-2026-001277'}
+10k,S1,jsonb,cold,5,658.8,1,{'trip_number': 'TR-2026-001748'}
+10k,S1,jsonb,cold,6,392.1,1,{'trip_number': 'TR-2023-000598'}
+10k,S1,jsonb,cold,7,360.4,1,{'trip_number': 'TR-2024-000021'}
+10k,S1,jsonb,cold,8,436.8,1,{'trip_number': 'TR-2025-000322'}
+10k,S1,jsonb,cold,9,364.2,1,{'trip_number': 'TR-2026-002045'}
+10k,S1,jsonb,cold,10,339.4,1,{'trip_number': 'TR-2025-000862'}
+10k,S1,jsonb,cold,11,317.3,1,{'trip_number': 'TR-2021-000520'}
+10k,S1,jsonb,cold,12,298.8,1,{'trip_number': 'TR-2021-001169'}
+10k,S1,jsonb,cold,13,258.9,1,{'trip_number': 'TR-2021-000548'}
+10k,S1,jsonb,cold,14,347.2,1,{'trip_number': 'TR-2026-000258'}
+10k,S1,jsonb,cold,15,343.5,1,{'trip_number': 'TR-2024-001087'}
+10k,S1,jsonb,cold,16,442.1,1,{'trip_number': 'TR-2023-000628'}
+10k,S1,jsonb,cold,17,462.4,1,{'trip_number': 'TR-2025-000923'}
+10k,S1,jsonb,cold,18,485.3,1,{'trip_number': 'TR-2026-001838'}
+10k,S1,jsonb,cold,19,437.1,1,{'trip_number': 'TR-2023-000784'}
+10k,S1,jsonb,cold,20,326.8,1,{'trip_number': 'TR-2024-001221'}
+10k,S1,jsonb,cold,21,364.3,1,{'trip_number': 'TR-2024-000253'}
+10k,S1,jsonb,cold,22,456.5,1,{'trip_number': 'TR-2022-000530'}
+10k,S1,jsonb,cold,23,389.8,1,{'trip_number': 'TR-2026-001635'}
+10k,S1,jsonb,cold,24,498.3,1,{'trip_number': 'TR-2023-000925'}
+10k,S1,jsonb,cold,25,382.2,1,{'trip_number': 'TR-2026-001879'}
+10k,S1,jsonb,cold,26,446.0,1,{'trip_number': 'TR-2022-000714'}
+10k,S1,jsonb,cold,27,369.0,1,{'trip_number': 'TR-2022-000261'}
+10k,S1,jsonb,cold,28,396.0,1,{'trip_number': 'TR-2024-000530'}
+10k,S1,jsonb,cold,29,382.8,1,{'trip_number': 'TR-2020-000767'}
+10k,S2,jsonb,cold,0,1347.3,0,"{'driver_id': 389, 'date_from': datetime.datetime(2023, 2, 14, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 2, 14, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,jsonb,cold,1,388.2,0,"{'driver_id': 105, 'date_from': datetime.datetime(2024, 2, 13, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 2, 12, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,jsonb,cold,2,599.7,3,"{'driver_id': 510, 'date_from': datetime.datetime(2024, 3, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 3, 30, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,3,342.4,0,"{'driver_id': 459, 'date_from': datetime.datetime(2024, 7, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 7, 23, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,jsonb,cold,4,335.9,0,"{'driver_id': 179, 'date_from': datetime.datetime(2021, 9, 21, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 9, 21, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,5,628.6,0,"{'driver_id': 786, 'date_from': datetime.datetime(2023, 7, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 7, 19, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,6,554.3,4,"{'driver_id': 774, 'date_from': datetime.datetime(2021, 5, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 5, 23, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,jsonb,cold,7,360.8,0,"{'driver_id': 568, 'date_from': datetime.datetime(2022, 2, 8, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 2, 8, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,jsonb,cold,8,341.4,0,"{'driver_id': 612, 'date_from': datetime.datetime(2022, 1, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 1, 17, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,jsonb,cold,9,305.1,0,"{'driver_id': 73, 'date_from': datetime.datetime(2022, 10, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 10, 27, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,jsonb,cold,10,339.5,0,"{'driver_id': 189, 'date_from': datetime.datetime(2020, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,11,397.5,0,"{'driver_id': 432, 'date_from': datetime.datetime(2023, 1, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 1, 30, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,jsonb,cold,12,360.5,0,"{'driver_id': 26, 'date_from': datetime.datetime(2020, 3, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 3, 27, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,13,273.7,0,"{'driver_id': 799, 'date_from': datetime.datetime(2020, 8, 15, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 8, 15, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,14,322.5,0,"{'driver_id': 667, 'date_from': datetime.datetime(2022, 3, 4, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 3, 4, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,jsonb,cold,15,339.7,0,"{'driver_id': 185, 'date_from': datetime.datetime(2023, 6, 12, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 6, 11, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,16,330.0,0,"{'driver_id': 691, 'date_from': datetime.datetime(2025, 5, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 5, 2, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,jsonb,cold,17,214.9,0,"{'driver_id': 130, 'date_from': datetime.datetime(2021, 4, 16, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 4, 16, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,jsonb,cold,18,408.8,1,"{'driver_id': 368, 'date_from': datetime.datetime(2021, 10, 5, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 10, 5, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,jsonb,cold,19,314.1,0,"{'driver_id': 68, 'date_from': datetime.datetime(2020, 11, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 11, 27, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,20,308.5,2,"{'driver_id': 724, 'date_from': datetime.datetime(2023, 11, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 11, 29, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,jsonb,cold,21,240.1,1,"{'driver_id': 461, 'date_from': datetime.datetime(2024, 9, 9, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 9, 9, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,jsonb,cold,22,290.2,0,"{'driver_id': 348, 'date_from': datetime.datetime(2024, 1, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 1, 16, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,23,267.0,0,"{'driver_id': 511, 'date_from': datetime.datetime(2022, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,24,309.0,0,"{'driver_id': 318, 'date_from': datetime.datetime(2022, 10, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 10, 2, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,25,285.2,0,"{'driver_id': 437, 'date_from': datetime.datetime(2022, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,26,278.6,0,"{'driver_id': 151, 'date_from': datetime.datetime(2025, 9, 3, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 9, 3, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,jsonb,cold,27,307.2,0,"{'driver_id': 440, 'date_from': datetime.datetime(2021, 10, 26, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 10, 26, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,28,338.9,0,"{'driver_id': 444, 'date_from': datetime.datetime(2024, 4, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 4, 20, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,jsonb,cold,29,396.6,3,"{'driver_id': 749, 'date_from': datetime.datetime(2024, 1, 22, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 1, 21, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S7,jsonb,cold,0,1945.0,7,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 5, 31, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2020, 6, 30, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,1,1008.4,12,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 9, 3, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 10, 3, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,2,772.8,13,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 1, 19, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 2, 18, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,3,685.3,6,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 8, 19, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 9, 18, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,4,686.8,12,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 5, 16, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 6, 15, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,5,797.6,11,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 11, 13, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 12, 13, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,6,618.5,11,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 11, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 12, 27, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,7,777.5,10,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 2, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 3, 25, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,8,747.3,17,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 7, 8, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 8, 7, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,9,639.0,10,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 12, 14, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 1, 13, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,10,1008.4,14,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 4, 16, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 5, 16, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,11,489.2,9,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 3, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 4, 29, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,12,483.5,9,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 6, 11, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 7, 11, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,13,572.3,12,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 10, 7, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 11, 6, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,14,492.2,8,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 4, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 5, 17, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,15,390.0,11,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 9, 7, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 10, 7, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,16,394.8,11,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 2, 11, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 3, 12, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,17,347.6,13,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 1, 31, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 3, 2, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,18,400.1,4,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 8, 4, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 9, 3, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,19,412.0,15,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 7, 28, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 8, 27, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,20,329.6,7,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 7, 2, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,21,332.8,9,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 5, 14, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2020, 6, 13, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,22,331.7,9,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 12, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 1, 1, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,23,349.0,9,"{'adr_class': 3, 'date_from': datetime.datetime(2022, 12, 19, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 1, 18, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,24,388.5,10,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 9, 11, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 10, 11, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,25,405.6,10,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 7, 2, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,26,369.2,11,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 1, 1, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 1, 31, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,27,340.2,9,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 3, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 4, 22, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,28,458.0,14,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 6, 4, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 7, 4, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,jsonb,cold,29,406.0,15,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 6, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 7, 17, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S5a,jsonb,cold,0,13051.4,713,{'year': 2023}
+10k,S5a,jsonb,cold,1,12108.2,713,{'year': 2023}
+10k,S5a,jsonb,cold,2,13229.2,720,{'year': 2025}
+10k,S5b,jsonb,cold,0,14275.8,432,{'year': 2023}
+10k,S5b,jsonb,cold,1,13184.8,422,{'year': 2021}
+10k,S5b,jsonb,cold,2,12939.9,410,{'year': 2020}
+10k,S1,mongo,cold,0,1445.9,1,{'trip_number': 'TR-2023-001160'}
+10k,S1,mongo,cold,1,562.4,1,{'trip_number': 'TR-2022-001095'}
+10k,S1,mongo,cold,2,459.1,1,{'trip_number': 'TR-2024-000347'}
+10k,S1,mongo,cold,3,517.5,1,{'trip_number': 'TR-2021-000153'}
+10k,S1,mongo,cold,4,507.7,1,{'trip_number': 'TR-2026-001277'}
+10k,S1,mongo,cold,5,467.5,1,{'trip_number': 'TR-2026-001748'}
+10k,S1,mongo,cold,6,439.5,1,{'trip_number': 'TR-2023-000598'}
+10k,S1,mongo,cold,7,421.6,1,{'trip_number': 'TR-2024-000021'}
+10k,S1,mongo,cold,8,411.1,1,{'trip_number': 'TR-2025-000322'}
+10k,S1,mongo,cold,9,363.3,1,{'trip_number': 'TR-2026-002045'}
+10k,S1,mongo,cold,10,402.9,1,{'trip_number': 'TR-2025-000862'}
+10k,S1,mongo,cold,11,341.5,1,{'trip_number': 'TR-2021-000520'}
+10k,S1,mongo,cold,12,399.4,1,{'trip_number': 'TR-2021-001169'}
+10k,S1,mongo,cold,13,352.9,1,{'trip_number': 'TR-2021-000548'}
+10k,S1,mongo,cold,14,470.8,1,{'trip_number': 'TR-2026-000258'}
+10k,S1,mongo,cold,15,399.2,1,{'trip_number': 'TR-2024-001087'}
+10k,S1,mongo,cold,16,463.8,1,{'trip_number': 'TR-2023-000628'}
+10k,S1,mongo,cold,17,385.2,1,{'trip_number': 'TR-2025-000923'}
+10k,S1,mongo,cold,18,377.7,1,{'trip_number': 'TR-2026-001838'}
+10k,S1,mongo,cold,19,339.6,1,{'trip_number': 'TR-2023-000784'}
+10k,S1,mongo,cold,20,357.5,1,{'trip_number': 'TR-2024-001221'}
+10k,S1,mongo,cold,21,382.1,1,{'trip_number': 'TR-2024-000253'}
+10k,S1,mongo,cold,22,355.9,1,{'trip_number': 'TR-2022-000530'}
+10k,S1,mongo,cold,23,379.3,1,{'trip_number': 'TR-2026-001635'}
+10k,S1,mongo,cold,24,376.8,1,{'trip_number': 'TR-2023-000925'}
+10k,S1,mongo,cold,25,355.8,1,{'trip_number': 'TR-2026-001879'}
+10k,S1,mongo,cold,26,331.3,1,{'trip_number': 'TR-2022-000714'}
+10k,S1,mongo,cold,27,368.0,1,{'trip_number': 'TR-2022-000261'}
+10k,S1,mongo,cold,28,332.2,1,{'trip_number': 'TR-2024-000530'}
+10k,S1,mongo,cold,29,369.1,1,{'trip_number': 'TR-2020-000767'}
+10k,S2,mongo,cold,0,4199.3,0,"{'driver_id': 389, 'date_from': datetime.datetime(2023, 2, 14, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 2, 14, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,mongo,cold,1,991.2,0,"{'driver_id': 105, 'date_from': datetime.datetime(2024, 2, 13, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 2, 12, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,mongo,cold,2,828.5,3,"{'driver_id': 510, 'date_from': datetime.datetime(2024, 3, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 3, 30, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,3,536.5,0,"{'driver_id': 459, 'date_from': datetime.datetime(2024, 7, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 7, 23, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,mongo,cold,4,450.6,0,"{'driver_id': 179, 'date_from': datetime.datetime(2021, 9, 21, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 9, 21, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,5,488.5,0,"{'driver_id': 786, 'date_from': datetime.datetime(2023, 7, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 7, 19, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,6,565.5,4,"{'driver_id': 774, 'date_from': datetime.datetime(2021, 5, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 5, 23, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,mongo,cold,7,514.5,0,"{'driver_id': 568, 'date_from': datetime.datetime(2022, 2, 8, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 2, 8, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,mongo,cold,8,597.2,0,"{'driver_id': 612, 'date_from': datetime.datetime(2022, 1, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 1, 17, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,mongo,cold,9,579.0,0,"{'driver_id': 73, 'date_from': datetime.datetime(2022, 10, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 10, 27, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,mongo,cold,10,776.2,0,"{'driver_id': 189, 'date_from': datetime.datetime(2020, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,11,690.2,0,"{'driver_id': 432, 'date_from': datetime.datetime(2023, 1, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 1, 30, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,mongo,cold,12,611.2,0,"{'driver_id': 26, 'date_from': datetime.datetime(2020, 3, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 3, 27, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,13,523.6,0,"{'driver_id': 799, 'date_from': datetime.datetime(2020, 8, 15, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 8, 15, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,14,495.0,0,"{'driver_id': 667, 'date_from': datetime.datetime(2022, 3, 4, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 3, 4, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,mongo,cold,15,430.6,0,"{'driver_id': 185, 'date_from': datetime.datetime(2023, 6, 12, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 6, 11, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,16,432.1,0,"{'driver_id': 691, 'date_from': datetime.datetime(2025, 5, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 5, 2, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,mongo,cold,17,404.3,0,"{'driver_id': 130, 'date_from': datetime.datetime(2021, 4, 16, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 4, 16, 0, 0, tzinfo=datetime.timezone.utc), 'page': 2}"
+10k,S2,mongo,cold,18,526.0,1,"{'driver_id': 368, 'date_from': datetime.datetime(2021, 10, 5, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 10, 5, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,mongo,cold,19,431.5,0,"{'driver_id': 68, 'date_from': datetime.datetime(2020, 11, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 11, 27, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,20,483.8,2,"{'driver_id': 724, 'date_from': datetime.datetime(2023, 11, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 11, 29, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,mongo,cold,21,456.0,1,"{'driver_id': 461, 'date_from': datetime.datetime(2024, 9, 9, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 9, 9, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,mongo,cold,22,495.3,0,"{'driver_id': 348, 'date_from': datetime.datetime(2024, 1, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 1, 16, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,23,521.4,0,"{'driver_id': 511, 'date_from': datetime.datetime(2022, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,24,907.9,0,"{'driver_id': 318, 'date_from': datetime.datetime(2022, 10, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 10, 2, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,25,691.8,0,"{'driver_id': 437, 'date_from': datetime.datetime(2022, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 6, 20, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,26,616.2,0,"{'driver_id': 151, 'date_from': datetime.datetime(2025, 9, 3, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 9, 3, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S2,mongo,cold,27,1347.4,0,"{'driver_id': 440, 'date_from': datetime.datetime(2021, 10, 26, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2022, 10, 26, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,28,593.7,0,"{'driver_id': 444, 'date_from': datetime.datetime(2024, 4, 20, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 4, 20, 0, 0, tzinfo=datetime.timezone.utc), 'page': 1}"
+10k,S2,mongo,cold,29,683.9,3,"{'driver_id': 749, 'date_from': datetime.datetime(2024, 1, 22, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 1, 21, 0, 0, tzinfo=datetime.timezone.utc), 'page': 0}"
+10k,S7,mongo,cold,0,3315.6,7,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 5, 31, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2020, 6, 30, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,1,673.3,12,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 9, 3, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 10, 3, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,2,693.0,13,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 1, 19, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 2, 18, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,3,571.0,6,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 8, 19, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 9, 18, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,4,776.2,12,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 5, 16, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 6, 15, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,5,758.3,11,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 11, 13, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 12, 13, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,6,709.1,11,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 11, 27, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 12, 27, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,7,673.3,10,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 2, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 3, 25, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,8,656.2,17,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 7, 8, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 8, 7, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,9,599.6,10,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 12, 14, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 1, 13, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,10,650.8,14,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 4, 16, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 5, 16, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,11,489.9,9,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 3, 30, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 4, 29, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,12,470.4,9,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 6, 11, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 7, 11, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,13,565.4,12,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 10, 7, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 11, 6, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,14,466.5,8,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 4, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 5, 17, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,15,442.1,11,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 9, 7, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 10, 7, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,16,460.8,11,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 2, 11, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 3, 12, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,17,590.1,13,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 1, 31, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 3, 2, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,18,596.0,4,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 8, 4, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 9, 3, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,19,656.5,15,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 7, 28, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 8, 27, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,20,589.4,7,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 7, 2, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,21,620.7,9,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 5, 14, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2020, 6, 13, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,22,603.6,9,"{'adr_class': 3, 'date_from': datetime.datetime(2020, 12, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 1, 1, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,23,418.1,9,"{'adr_class': 3, 'date_from': datetime.datetime(2022, 12, 19, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 1, 18, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,24,633.8,10,"{'adr_class': 3, 'date_from': datetime.datetime(2025, 9, 11, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2025, 10, 11, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,25,549.9,10,"{'adr_class': 3, 'date_from': datetime.datetime(2021, 6, 2, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2021, 7, 2, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,26,471.3,11,"{'adr_class': 3, 'date_from': datetime.datetime(2023, 1, 1, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2023, 1, 31, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,27,501.2,9,"{'adr_class': 3, 'date_from': datetime.datetime(2024, 3, 23, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2024, 4, 22, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,28,465.5,14,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 6, 4, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 7, 4, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S7,mongo,cold,29,450.7,15,"{'adr_class': 3, 'date_from': datetime.datetime(2026, 6, 17, 0, 0, tzinfo=datetime.timezone.utc), 'date_to': datetime.datetime(2026, 7, 17, 0, 0, tzinfo=datetime.timezone.utc)}"
+10k,S5a,mongo,cold,0,14094.7,713,{'year': 2023}
+10k,S5a,mongo,cold,1,14180.5,713,{'year': 2023}
+10k,S5a,mongo,cold,2,12303.8,720,{'year': 2025}
+10k,S5b,mongo,cold,0,16079.3,432,{'year': 2023}
+10k,S5b,mongo,cold,1,19503.2,422,{'year': 2021}
+10k,S5b,mongo,cold,2,18922.2,410,{'year': 2020}

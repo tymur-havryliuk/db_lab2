@@ -1,0 +1,71 @@
+[verify] перевірено 75 викликів, розбіжностей: 0
+[warm] читання
+  S1   sql   warm n=200  p50=    0.307 ms  p95=    0.341  p99=    0.384
+  S1   jsonb warm n=200  p50=    0.201 ms  p95=    0.232  p99=    0.241
+  S1   mongo warm n=200  p50=    0.236 ms  p95=    0.267  p99=    0.298
+  S2   jsonb warm n=200  p50=    0.288 ms  p95=    0.533  p99=    0.781
+  S2   mongo warm n=200  p50=    0.228 ms  p95=    0.377  p99=    0.422
+  S2   sql   warm n=200  p50=    0.180 ms  p95=    0.270  p99=    0.325
+  S7   mongo warm n=200  p50=    0.605 ms  p95=    0.720  p99=    1.050
+  S7   sql   warm n=200  p50=    0.798 ms  p95=    0.853  p99=    1.002
+  S7   jsonb warm n=200  p50=    2.008 ms  p95=    2.224  p99=    2.983
+  S5a  sql   warm n=15   p50=    5.840 ms  p95=    6.356  p99=    6.539
+  S5a  jsonb warm n=15   p50=  112.942 ms  p95=  115.400  p99=  116.699
+  S5a  mongo warm n=15   p50=   30.665 ms  p95=   33.234  p99=   33.476
+  S5b  jsonb warm n=15   p50=  117.005 ms  p95=  124.141  p99=  126.051
+  S5b  mongo warm n=15   p50=   65.263 ms  p95=   67.795  p99=   67.972
+  S5b  sql   warm n=15   p50=    4.825 ms  p95=    5.105  p99=    5.185
+[server] EXPLAIN / executionStats
+[cold] stop → drop_caches → start
+  S1   sql   cold n=30   p50=    0.829 ms  p95=    2.137  p99=    5.388
+  S2   sql   cold n=30   p50=    0.731 ms  p95=    1.328  p99=    3.827
+  S7   sql   cold n=30   p50=    1.326 ms  p95=    1.749  p99=    3.221
+  S5a  sql   cold n=3    p50=   12.272 ms  p95=   13.210  p99=   13.293
+  S5b  sql   cold n=3    p50=    8.442 ms  p95=    8.924  p99=    8.967
+  S1   jsonb cold n=30   p50=    0.310 ms  p95=    0.726  p99=    1.169
+  S2   jsonb cold n=30   p50=    0.574 ms  p95=    1.076  p99=    1.905
+  S7   jsonb cold n=30   p50=    2.652 ms  p95=    3.225  p99=   24.718
+  S5a  jsonb cold n=3    p50=  116.308 ms  p95=  122.055  p99=  122.566
+  S5b  jsonb cold n=3    p50=   68.777 ms  p95=   85.957  p99=   87.485
+  S1   mongo cold n=30   p50=    0.796 ms  p95=    1.094  p99=    1.723
+  S2   mongo cold n=30   p50=    0.326 ms  p95=    0.609  p99=    3.021
+  S7   mongo cold n=30   p50=    1.668 ms  p95=    2.187  p99=    4.876
+  S5a  mongo cold n=3    p50=   59.309 ms  p95=   61.325  p99=   61.504
+  S5b  mongo cold n=3    p50=   62.219 ms  p95=   63.644  p99=   63.770
+[writes] S3, S6, S4
+  S3a  sql   warm n=200  p50=    0.359 ms  p95=    0.632  p99=    0.714
+  S3a  jsonb warm n=200  p50=    0.358 ms  p95=    0.514  p99=    0.613
+  S3a  mongo warm n=200  p50=    0.557 ms  p95=    0.989  p99=    1.190
+  S3b  jsonb warm n=200  p50=    0.386 ms  p95=    0.886  p99=    1.024
+  S3b  mongo warm n=200  p50=    0.494 ms  p95=    1.032  p99=    1.309
+  S3b  sql   warm n=200  p50=    0.374 ms  p95=    0.677  p99=    0.749
+  S6all sql   warm n=15   p50=    1.092 ms  p95=    2.340  p99=    4.146
+  S6all jsonb warm n=15   p50=    1.843 ms  p95=    8.708  p99=   13.718
+  S6all mongo warm n=15   p50=    1.400 ms  p95=    3.845  p99=    6.659
+  S6open jsonb warm n=15   p50=    1.486 ms  p95=    3.673  p99=    6.246
+  S6open mongo warm n=15   p50=    1.483 ms  p95=    3.204  p99=    4.445
+  S6open sql   warm n=15   p50=    0.669 ms  p95=    3.010  p99=    6.379
+  S4   sql   batch=1     p50=    1.279 ms/batch        752 trips/s
+  S4   sql   batch=10    p50=    3.669 ms/batch       2708 trips/s
+  S4   sql   batch=100   p50=   11.473 ms/batch       7800 trips/s
+  S4   sql   batch=1000  p50=   90.853 ms/batch      11017 trips/s
+  S4   jsonb batch=1     p50=    0.544 ms/batch       1591 trips/s
+  S4   jsonb batch=10    p50=    1.261 ms/batch       7815 trips/s
+  S4   jsonb batch=100   p50=    5.003 ms/batch      19375 trips/s
+  S4   jsonb batch=1000  p50=   37.180 ms/batch      26775 trips/s
+  S4   mongo batch=1     p50=    0.380 ms/batch       1906 trips/s
+  S4   mongo batch=10    p50=    1.108 ms/batch       9001 trips/s
+  S4   mongo batch=100   p50=    6.032 ms/batch      16460 trips/s
+  S4   mongo batch=1000  p50=   47.464 ms/batch      20934 trips/s
+[S8] змішане навантаження
+  S8   sql   workers=1     3031.0 ops/s  p50=   0.289  p99=   0.955 ms  errors=0
+  S8   sql   workers=8    12514.1 ops/s  p50=   0.378  p99=   1.260 ms  errors=0
+  S8   sql   workers=32    8170.4 ops/s  p50=   1.208  p99=  68.215 ms  errors=0
+  S8   jsonb workers=1     2642.9 ops/s  p50=   0.213  p99=   2.900 ms  errors=0
+  S8   jsonb workers=8     7522.5 ops/s  p50=   0.274  p99=  46.877 ms  errors=0
+  S8   jsonb workers=32    5848.9 ops/s  p50=   1.625  p99=  76.596 ms  errors=0
+  S8   mongo workers=1     2919.9 ops/s  p50=   0.301  p99=   0.917 ms  errors=0
+  S8   mongo workers=8    16326.7 ops/s  p50=   0.368  p99=   1.333 ms  errors=0
+  S8   mongo workers=32   14908.6 ops/s  p50=   0.926  p99=  38.369 ms  errors=0
+[verify] перевірено 75 викликів, розбіжностей: 0
+готово за 506 s; результати в /Users/tymur.havryliuk/uni/DB/lab2/results/100k
